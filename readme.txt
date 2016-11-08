@@ -1,6 +1,4 @@
 === TotcBase ===
-Contributors: Theme_of_the_Crop_Base_Theme
-Donate link: https://themeofthecrop.com
 Requires at least: 4.7
 Tested up to: 4.7
 Stable tag: 1.0
