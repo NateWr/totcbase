@@ -1,0 +1,10 @@
+node_modules
+style.css
+style.min.css
+assets/css/customize-preview.css
+assets/css/customizer-preview.min.css
+assets/css/customizer-control.css
+assets/css/customizer-control.min.css
+assets/js/frontend.js
+assets/js/customizer-preview.js
+assets/js/customizer-control.js

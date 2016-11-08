@@ -1,0 +1,118 @@
+//
+// Styling for the Event Organiser plugin
+//
+
+// Event meta
+.event-meta-item {
+	position: relative;
+	margin-bottom: 4em;
+	font-size: 0.85em;
+	font-weight: @normal;
+	text-transform: none;
+	vertical-align: top;
+
+	&:before {
+		// icon
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&.venue,
+	&.short-date {
+		padding-left: 2em;
+	}
+
+	&.venue:before {
+		// content: "\f230"; // dashicons
+	}
+
+	&.short-date:before {
+		// content: "\f508"; // dashicons
+	}
+
+	&.recurrence-description {
+		padding: 2em 0;
+
+		.next-occurrence {
+			font-weight: @bold;
+		}
+	}
+
+	&.upcoming-dates {
+
+		.title {
+			font-weight: @bold;
+			margin-bottom: 1em;
+		}
+
+		ul {
+			&:extend(.unstyled-list);
+			margin-bottom: 1em;
+		}
+
+		li {
+			padding: 0.25em 0;
+		}
+
+		a {
+			font-weight: @semibold;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			&:before {
+				// icons
+				width: 1.25em;
+				vertical-align: middle;
+			}
+		}
+
+		.eo-upcoming-dates-show-more:before {
+			// content: "\f347"; // dashicons
+		}
+
+		.eo-upcoming-dates-show-less:before {
+			// content: "\f343"; // dashicons
+		}
+
+		.eo-upcoming-dates-pipe {
+			padding: 0 0.5em;
+			color: transparent;
+		}
+	}
+}
+
+// Swap the next/prev links in event archives
+.tax-event-category,
+.tax-event-tag,
+.tax-event-venue,
+.post-type-archive-event {
+
+	.nav-previous {
+		float: right;
+	}
+
+	.nav-next {
+		float: left;
+	}
+}
+
+// Event List shortcode
+// [eo-events]
+.eo-events-shortcode {
+	font-size: 0.85em;
+
+	li {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+
+		li:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	a {
+		font-weight: @bold;
+		text-decoration: none;
+	}
+}

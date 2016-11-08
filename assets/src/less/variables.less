@@ -1,0 +1,63 @@
+//
+// Variables for common colors, sizing and more.
+//
+
+// Colors
+@bg:                  #eee;
+
+@accent:             #55f;
+@accent-lift:        #99f;
+
+@text:                rgba(0,0,0,0.85);
+@text-light:          fadeout( @text, 35% );
+
+@border-color:        rgba(0,0,0,0.3);
+@border-light-color:  rgba(0,0,0,0.12);
+
+@yes:                 #459A5B;
+@no:                  #e4002b;
+@warn:                #F57405;
+
+// Lines and edges
+@border:         1px solid @border-color;
+@border-light:   1px solid @border-light-color;
+@radius:              5px;
+
+// Typography
+@font:                -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+@font-alt:            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+@font-base:           16px;
+@line-base:           24px;
+@light:               300;
+@normal:              400;
+@semibold:            600;
+@bold:                700;
+
+// Breakpoints
+@screen-xs:           480px;
+@screen-sm:           768px;
+@screen-md:           992px;
+@screen-lg:           1200px;
+@screen-xl:           1600px;
+
+// Widths
+@content-width:        600px;
+@sidebar-width:        300px;
+@gutter:               30px;
+@container-full-sm:    @screen-sm - (@gutter * 2);
+@container-full-md:    @screen-md - (@gutter * 2);
+@container-full-lg:    @screen-lg - (@gutter * 2);
+@container-full-xl:    @screen-xl - (@gutter * 2);
+@container-primary-sm: @container-full-sm - (@gutter * 2);
+@container-primary-md: @container-full-md - (@gutter * 3) - @sidebar-width;
+@container-primary-lg: @container-full-lg - (@gutter * 3) - @sidebar-width;
+@container-primary-xl: @container-full-xl - (@gutter * 3) - @sidebar-width;
+
+// Event Calendar
+@fc-row-height: 10em;
+@fc-border-color: @border-color;
+@fc-calendar-header-bg: transparent; //  Background behind day of the week/month headers
+@fc-agenda-header-bg: @fc-calendar-header-bg;
+@fc-basic-header-bg: @fc-calendar-header-bg;
+@fc-qtip-bg: #fff; // Event detail popover
+@fc-qtip-text: #000;

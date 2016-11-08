@@ -1,0 +1,416 @@
+//
+// Widgets
+//
+.widget-area {
+	&:extend(.unstyled-list);
+	word-wrap: break-word;
+
+	> li {
+		padding: 4em;
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	.widgettitle {
+		margin-top: 0;
+		margin-bottom: 2em;
+	}
+}
+
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_meta,
+.widget_nav_menu,
+.widget_recent_comments,
+.EO_Event_List_Widget,
+.eo__event_categories,
+.eo-agenda-widget {
+
+	> ul {
+		padding-left: 0;
+	}
+
+	li {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+
+		ul {
+			padding-top: 0.5em;
+			padding-left: 1em;
+		}
+
+		li:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.widget_categories,
+.widget_pages,
+.widget_nav_menu {
+	&:extend(.limit-large-list-nesting all);
+}
+
+.widget_calendar table {
+	width: 100%;
+
+	caption {
+		//
+	}
+
+	td,
+	th {
+		text-align: center;
+	}
+
+	a {
+		//
+	}
+
+	#prev,
+	#eo-widget-prev-month { // Event Organiser
+		text-align: left;
+	}
+
+	#next,
+	#eo-widget-next-month { // Event Organiser
+		text-align: right;
+	}
+}
+
+.widget_rss {
+
+	.widgettitle a {
+
+		img {
+			float: right;
+			position: relative;
+			top: 4px;
+		}
+	}
+
+	> ul {
+		&:extend(.unstyled-list);
+		padding-left: 0;
+	}
+
+	li {
+		padding-bottom: 3em;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		.rsswidget {
+			//
+		}
+	}
+
+	.rss-date {
+		display: block;
+	}
+
+	.rssSummary {
+		margin-top: 1em;
+	}
+
+	cite {
+		display: block;
+		text-align: right;
+	}
+}
+
+.widget_search {
+
+	.search-form {
+		position: relative;
+		max-width: 30em;
+		text-align: right;
+	}
+
+	label {
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+
+	.search-field {
+		display: block;
+		width: 100%;
+	}
+
+	.search-submit {
+		margin-top: 1em;
+	}
+}
+
+.widget_nav_menu {
+
+	.menu {
+		padding-left: 0;
+	}
+}
+
+.widget_recent_entries {
+
+	> ul {
+		&:extend(.unstyled-list);
+	}
+
+	li {
+		padding-bottom: 4em;
+	}
+
+	.entry-header {
+		margin-bottom: 1em;
+	}
+
+	.entry-title {
+		//
+	}
+
+	.entry-content {
+		//
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+// Event Organiser Agenda
+.eo-agenda-widget {
+
+	.dates {
+		margin-top: -3em;
+
+		> li {
+			padding-left: 0;
+			margin-top: 0.5em;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	.a-date {
+		padding-top: 1em;
+		padding-left: 0;
+
+		> li {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+
+		.meta {
+			display: block !important;
+			margin-top: 0.5em;
+		}
+	}
+}
+
+.eo-agenda-widget-nav {
+	position: relative;
+	display: block;
+	height: 3em;
+	text-align: right;
+	z-index: 2;
+
+	> span {
+		position: relative;
+		display: inline-block;
+		width: 3em;
+		height: 3em;
+		color: transparent;
+		text-align: center;
+		overflow: hidden;
+		cursor: pointer;
+
+		&:before {
+			// font icon
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: @text;
+		}
+	}
+}
+
+.eo-agenda-widget-nav-prev:before {
+	// content: "\f341"; // dashicons
+}
+
+.eo-agenda-widget-nav-next:before {
+	// content: "\f345"; // dashicons
+}
+
+// Ninja Forms
+.widget_ninja_forms_widget {
+
+	.ninja-forms-cont {
+
+		.label-left,
+		.label-right {
+
+			label {
+				padding: 0;
+			}
+
+			label,
+			.ninja-forms-field,
+			.ninja-forms-field-description {
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+
+	.ninja-forms-field-description {
+		//
+	}
+}
+
+// Reset styles for components/plugins displayed in sidebar areas
+.widget-area {
+
+	@media(min-width: @screen-xs) {
+
+		.fdm-item-image {
+			float: none;
+			width: auto;
+			clear: none;
+		}
+
+		.fdm-item-has-image .fdm-item-panel {
+			float: none;
+			padding-left: 0;
+			width: auto;
+		}
+
+		.fdm-item-special {
+			position: relative;
+			top: 0;
+		}
+
+		// Adjust the price wrapper when an special is set on the menu item
+		.fdm-item-price-wrapper:nth-child(3) {
+			top: 30px;
+		}
+
+		.fdm-columns-2 {
+
+			.fdm-column {
+				float: none;
+				width: 100%;
+				padding: 0;
+
+				+ .fdm-column {
+					margin-top: 6em;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	@media(min-width: @screen-md) {
+
+		.rtb-booking-form form {
+
+			fieldset,
+			label {
+				float: none;
+				width: 100%;
+			}
+
+			.rtb-text input,
+			.rtb-select select {
+				width: 100%;
+			}
+
+			button {
+				width: 100%;
+			}
+		}
+
+		.bp-contact-card {
+			padding: 0;
+			background: transparent;
+			border: none;
+
+			.bp-opening-hours {
+				margin: 3em 0;
+				padding: 0;
+				border: none;
+				text-align: left;
+			}
+
+			.bp-title {
+				margin-bottom: 1em;
+				padding-left: 0;
+			}
+
+			.bp-map {
+				height: 270px;
+				min-height: 270px;
+
+				.bp-map-info-window {
+					max-width: 150px;
+				}
+			}
+		}
+
+		.gr-reviews {
+
+			.gr-review {
+				margin: 4em 0;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.gr-content,
+			.gr-author {
+				float: none;
+				width: auto;
+			}
+
+			.gr-review-has-rating .gr-author {
+				margin-top: 2em;
+			}
+
+			.gr-review-body {
+				margin: 1em 0;
+
+				p:first-child {
+					margin-top: 0;
+				}
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.gr-rating-stars {
+				margin-bottom: 1em;
+
+				.dashicons {
+					width: 25px;
+					height: 25px;
+					font-size: 20px;
+					line-height: 25px;
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,300 @@
+//
+// Styles for handling the output of the Ninja Forms plugin
+//
+
+// Hide the honeypot
+.nf-field-hp,
+.hp-wrap,
+.honeypot-wrap {
+	&:extend(.screen-reader-text all);
+}
+
+.ninja-forms-cont,
+.nf-form-cont {
+
+	.field-wrap {
+		margin-top: 3em;
+		margin-bottom: 3em;
+	}
+
+	label {
+		display: block;
+		margin-top: 0;
+	}
+
+	.label-below label {
+		margin-top: 0.5em;
+		margin-bottom: 0;
+	}
+
+	@media(min-width: @screen-xs) {
+
+		.label-left,
+		.label-right {
+			.clearfix();
+
+			label {
+				float: left;
+				margin-bottom: 0;
+				width: 40%;
+
+				+ .ninja-forms-field-description,
+				+ .nf-field-description {
+					float: left;
+					clear: left;
+					padding-right: 2em;
+					width: 40%;
+				}
+			}
+
+			.nf-field-element,
+			.ninja-forms-field {
+				float: right;
+				width: 60%;
+			}
+
+			.nf-field-element {
+
+				input[type="text"],
+				input[type="email"],
+				input[type="phone"],
+				select,
+				textarea {
+					width: 100%;
+				}
+			}
+		}
+
+		.label-right {
+
+			label {
+				float: right;
+				padding-right: 0;
+				padding-left: 2em;
+
+				+ .ninja-forms-field-description,
+				+ .nf-field-description {
+					float: right;
+					clear: right;
+					padding-left: 2em;
+					width: 40%;
+				}
+			}
+
+			.ninja-forms-field {
+				float: left;
+			}
+		}
+	}
+
+	.label-left .checkbox-wrap,
+	.label-right .checkbox-wrap {
+
+		.nj-field,
+		.ninja-forms-field,
+		.nf-field-label,
+		label {
+			display: inline;
+			float: none;
+			width: auto;
+			padding-right: 0.5em;
+		}
+
+		.nf-field-label,
+		label {
+			font-size: 0.85em;
+			font-weight: @normal;
+			text-transform: none;
+		}
+	}
+
+	.label-left .checkbox-wrap label {
+		padding-right: 0.5em;
+	}
+
+	.label-right .checkbox-wrap {
+
+		label {
+			padding-left: 0.5em;
+		}
+
+		.nf-field-element {
+			float: left;
+			width: auto;
+		}
+	}
+
+	.list-radio-wrap,
+	.list-checkbox-wrap {
+
+		.nf-field-element,
+		.nf-field-label label {
+			float: none;
+			padding-left: 0;
+			padding-right: 0;
+			display: block;
+		}
+
+		.nf-field-element {
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			label,
+			.nf-element {
+				float: none;
+				display: inline-block;
+				width: auto;
+			}
+
+			label {
+				padding: 0;
+				font-size: 0.85em;
+				font-weight: @normal;
+				text-transform: none;
+			}
+
+		}
+	}
+
+	.list-multiselect-wrap {
+
+		select[multiple] {
+			width: 100%;
+			height: 10em;
+		}
+	}
+
+	#pass-strength-result {
+		display: inline-block;
+		margin-top: 0.5em;
+		padding: 0.5em 1em;
+		background: rgba(0,0,0,0.1);
+		font-size: 0.85em;
+
+		&.bad,
+		&.good,
+		&.short,
+		&.strong {
+			color: #fff;
+		}
+
+		&.bad {
+			background: @no;
+		}
+
+		&.good {
+			background: @yes;
+		}
+
+		&.short {
+			background: @warn;
+		}
+
+		&.strong {
+			background: @yes;
+		}
+	}
+}
+
+.nf-field-description,
+.ninja-forms-field-description,
+.ninja-forms-cont .description {
+	font-size: 0.85em;
+	margin: 0.5em 0;
+}
+
+.ninja-forms-pass2 {
+	margin-top: 3em;
+}
+
+.ninja-forms-star-rating {
+	display: inline-block;
+	width: 2.5em;
+	height: 2.5em;
+	line-height: 2.5em;
+	cursor: pointer;
+
+	&:before {
+		// icon
+		// content: "\f154"; // dashicon
+	}
+
+	a {
+		&:extend(.screen-reader-text all);
+	}
+}
+
+.ninja-forms-star-rating-on,
+.ninja-forms-star-rating-hover {
+
+	&:before {
+		content: "\f155";
+		color: @accent;
+	}
+}
+
+.ninja-forms-response-msg {
+	margin-bottom: 2em;
+	font-size: 0.85em;
+	text-transform: uppercase;
+
+	> div {
+		padding: 3em;
+		border: @border;
+	}
+}
+
+.ninja-forms-success-msg {
+	border-left: 4px solid @yes;
+
+	> div {
+		border-left: none;
+	}
+}
+
+.ninja-forms-error-msg {
+	border-left: 4px solid @no;
+
+	> div {
+		border-left: none;
+	}
+}
+
+.ninja-forms-required-items,
+.ninja-forms-req-symbol {
+	font-size: 0.85em;
+	font-weight: @bold;
+	font-style: italic;
+	color: @no;
+}
+
+.nf-error-msg,
+.ninja-forms-field-error {
+	&:extend(.totcbase-error-message);
+	top: -1px;
+
+	&:before {
+		&:extend(.totcbase-error-message:before);
+		.transform(rotate(-45deg));
+		margin-top: -2px;
+	}
+
+	// Same as .totcbase-error-message:after but points up
+	&:after {
+		content: '';
+		display: inline-block;
+		position: absolute;;
+		top: 50%;
+		left: 16px;
+		width: 0;
+		height: 0;
+		margin-top: -8px;
+		border: 8px solid transparent;
+		border-bottom-color: @no;
+		vertical-align: middle;
+	}
+}

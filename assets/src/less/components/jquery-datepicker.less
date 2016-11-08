@@ -1,0 +1,112 @@
+//
+// jQuery UI Datepicker
+//
+.ui-datepicker {
+	position: absolute;
+	top: -9999px; // Hide the datepicker off-screen until it's requested
+	width: 16em;
+	padding: 1em;
+	max-width: 100%;
+	background: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+	@media(min-width: @screen-md) {
+		width: 25em;
+	}
+
+	// Can be select dropdowns or just text. This styling brings consistent
+	// sizing to the elements whether select or text.
+	.ui-datepicker-month,
+	.ui-datepicker-year {
+		display: inline-block;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		margin-left: 2px;
+		padding: 6px 1em 7px;
+
+		&:focus {
+			padding-left: 7px;
+		}
+	}
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+	display: block;
+	position: absolute;
+	top: 2em;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	cursor: pointer;
+
+
+	> span {
+		&:extend(.screen-reader-text all);
+	}
+}
+
+.ui-datepicker-prev {
+	left: 1em;
+
+	&:before {
+		display: block;
+		// content: "\f341"; // Dashicons
+	}
+}
+
+.ui-datepicker-next {
+	right: 1em;
+
+	&:before {
+		display: block;
+		// content: "\f345"; // Dashicons
+	}
+}
+
+.ui-datepicker-title {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.ui-datepicker-calendar {
+	width: 100%;
+
+	td {
+		padding: 0;
+		text-align: center;
+	}
+
+	th,
+	a {
+		padding: 1em;
+		text-align: center;
+
+		@media(min-width: @screen-md) {
+			padding: 1em;
+		}
+	}
+
+	tbody {
+
+		tr {
+			border-top: @border;
+
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		line-height: 3em;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background: @accent;
+			color: @text;
+		}
+	}
+}

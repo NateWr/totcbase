@@ -1,0 +1,83 @@
+//
+// Mix-ins, functions, etc.
+//
+.clearfix() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Input field placeholders
+.placeholder() {
+	&:-moz-placeholder,          // Firefox 4-18
+	&::-moz-placeholder,         // Firefox 19+
+	&:-ms-input-placeholder,     // Internet Explorer 10+
+	&::-webkit-input-placeholder // Safari and Chrome
+	{
+		opacity: 50%;
+	}
+}
+
+// Remove indentation and bullets from lists
+.unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Containers at various screen widths
+.container {
+	padding-left: 2em;
+	padding-right: 2em;
+
+	@media( min-width: @screen-sm ) {
+		width: @screen-sm - 4em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media( min-width: @screen-md ) {
+		width: @screen-md - 4em;
+	}
+
+	@media( min-width: @screen-lg ) {
+		width: @screen-lg - 4em;
+	}
+}
+
+// Transform vendor prefixes
+.transform( @transform ) {
+	-webkit-transform: @transform;
+	-ms-transform: @transform;
+	transform: @transform;
+}
+
+// Animation prefixes
+.animation(@animation) {
+	-webkit-animation: @animation;
+	-moz-animation: @animation;
+	-o-animation: @animation;
+	animation: @animation;
+}
+
+// Limit horizontal drift in excessively nested lists
+.limit-large-list-nesting {
+
+	ul ul ul ul ul {
+		padding-left: 0.25em;
+
+		li {
+			padding-top: 0;
+			padding-left: 0;
+
+			a {
+				padding-left: 0;
+			}
+		}
+	}
+}

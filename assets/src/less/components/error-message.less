@@ -1,0 +1,31 @@
+//
+// Styles for an error message
+//
+.totcbase-error-message {
+	position: relative;
+	padding: 1em 2em;
+	background: @no;
+	color: #fff;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 2em;
+		.transform(rotate(45deg));
+		margin-top: -4px;
+		width: 8px;
+		height: 8px;
+		background: #fff;
+	}
+
+	&:after {
+		&:extend(.totcbase-caret-down);
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		border-width: 8px;
+		border-top-color: @no;
+		margin-top: -6px;
+	}
+}

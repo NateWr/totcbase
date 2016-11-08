@@ -1,0 +1,43 @@
+//
+// Styles for handling the output of the Business Profile plugin
+//
+.bp-contact-card {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 40em;
+	font-style: normal; // overwrite default <address> styling
+}
+
+.bp-opening-hours {
+	text-align: center;
+	clear: both;
+
+	.bp-title {
+		margin-bottom: 2em;
+	}
+
+	.bp-weekday {
+		.clearfix();
+		padding: 0.5em 1em;
+		text-align: left;
+	}
+
+	.bp-times {
+		float: right;
+		font-weight: normal;
+	}
+}
+
+.bp-map {
+	min-height: 370px;
+
+	p {
+		margin: 1em 0;
+		color: @text; // Don't allow this to be overridden by color options
+	}
+}
+
+.bp-map-info-window {
+	width: 200px;
+	max-width: 100%;
+}

@@ -1,0 +1,105 @@
+//
+// Styles for handling the output of the Good Reviews for WP plugin
+//
+.gr-reviews {
+
+	.gr-review {
+		margin: 6em auto;
+		padding: 0;
+		max-width: 40em;
+		border: none;
+	}
+
+	.gr-review-body,
+	.gr-author {
+		margin: 2em 0;
+		color: @text;
+	}
+
+	.gr-review {
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.gr-review-rating {
+		margin-bottom: 2em;
+	}
+
+	.gr-rating-stars {
+		.clearfix();
+
+		.dashicons {
+			display: block;
+			float: left;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			text-align: left;
+			color: @accent;
+		}
+	}
+
+	.gr-rating-numbers {
+		color: @accent;
+	}
+
+	.gr-review-body {
+		font-style: italic;
+	}
+
+	.gr-review-date {
+		//
+	}
+
+	.gr-review-url {
+		//
+	}
+
+	.gr-author {
+		position: relative;
+		display: block;
+		font-style: normal;
+	}
+
+	.gr-author-affiliation {
+		//
+	}
+
+	.gr-author-img {
+		.transform(translateY(-50%));
+		position: absolute;
+		top: 50%;
+		width: 6em;
+		height: 6em;
+
+		img {
+			display: block;
+			width: 6em;
+			height: 6em;
+			border-radius: 50%;
+		}
+	}
+
+	.gr-item-has-image {
+
+		.gr-author {
+			min-height: 6em;
+		}
+
+		.gr-author-text {
+			position: relative;
+			padding-left: 7.5em;
+			top: 1.5em;
+		}
+	}
+
+	&.gr-reviews-cycle .gr-review {
+		display: none;
+	}
+}

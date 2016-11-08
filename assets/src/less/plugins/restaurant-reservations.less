@@ -1,0 +1,230 @@
+//
+// Styles for handling the output of the Restaurant Reservations plugin
+//
+.rtb-booking-form {
+
+	label {
+		display: block;
+		margin: 0;
+	}
+
+	.rtb-select.location label:before {
+		// icon
+	}
+
+	.rtb-text.date label:before {
+		// icon
+	}
+
+	.rtb-text.time label:before {
+		// icon
+	}
+
+	.rtb-select.party label:before {
+		// icon
+	}
+
+	.rtb-text.name label:before {
+		// icon
+	}
+
+	.rtb-text.email label:before {
+		// icon
+	}
+
+	.rtb-text.phone label:before {
+		// icon
+	}
+
+	.rtb-text input,
+	.rtb-select select {
+		width: 100%;
+	}
+
+	.rtb-checkbox input,
+	.rtb-radio input,
+	.rtb-confirm input,
+	.optin > div input {
+		position: relative;
+		top: -1px;
+		vertical-align: middle;
+		margin-right: 0.5em;
+	}
+
+	.rtb-checkbox label:not(:first-child):before,
+	.rtb-radio label:not(:first-child):before,
+	.rtb-confirm label:before,
+	.optin > div label:before {
+		display: none;
+	}
+
+	.rtb-text.date input,
+	.rtb-text.time input {
+		cursor: pointer;
+	}
+
+	.rtb-error {
+		&:extend(.totcbase-error-message all);
+	}
+
+	// Mailchimp opt-in fieldset
+	.mc-optin {
+		margin-top: 0;
+	}
+}
+
+// Date and time picker
+.picker {
+
+	.picker__holder {
+		cursor: pointer;
+	}
+
+	button {
+		color: @text;
+	}
+
+	.picker__header {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
+	.picker__nav--next:before,
+	.picker__nav--prev:before {
+		position: relative;
+		top: 0.25em;
+		border-width: 0.25em;
+	}
+
+	.picker__table,
+	.picker__table tr {
+		border: none;
+	}
+
+	.picker__table {
+
+		th,
+		td {
+			text-align: center;
+		}
+	}
+
+	.picker__day {
+		padding: 0.5em 0;
+	}
+
+	.picker__day--outfocus,
+	.picker__day--disabled {
+		// color: ;
+	}
+
+	.picker__footer {
+		margin-top: 2em;
+		margin-bottom: 2em;
+
+		button {
+
+			&:before {
+				margin-right: 1em;
+			}
+		}
+
+		.picker__button--close:before {
+			top: 0;
+			width: 2em;
+			height: 2em;
+			border: 1px solid;
+			border-radius: 50%;
+			line-height: 2em;
+			text-align: center;
+		}
+	}
+
+	.picker__list {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.picker__list-item:first-child {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+
+	&.picker--time .picker__button--clear {
+		width: 100%;
+		margin: 0;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
+
+// Swap out icons based on background color
+.totcbase-bg-dark {
+
+	.rtb-booking-form label:before {
+		// icon
+	}
+
+	.rtb-text.date label:before {
+		// icon
+	}
+
+	.rtb-text.time label:before {
+		// icon
+	}
+
+	.rtb-select.party label:before {
+		// icon
+	}
+
+	.rtb-text.name label:before {
+		// icon
+	}
+
+	.rtb-text.email label:before {
+		// icon
+	}
+
+	.rtb-text.phone label:before {
+		// icon
+	}
+
+	.rtb-location label:before {
+		// icon
+	}
+}
+
+.totcbase-bg-light {
+
+	.rtb-booking-form label:before {
+		// icon
+	}
+
+	.rtb-text.date label:before {
+		// icon
+	}
+
+	.rtb-text.time label:before {
+		// icon
+	}
+
+	.rtb-select.party label:before {
+		// icon
+	}
+
+	.rtb-text.name label:before {
+		// icon
+	}
+
+	.rtb-text.email label:before {
+		// icon
+	}
+
+	.rtb-text.phone label:before {
+		// icon
+	}
+
+	.rtb-select.location label:before {
+		// icon
+	}
+}

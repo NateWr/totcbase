@@ -1,0 +1,35 @@
+//
+// Social profiles menu
+//
+.totcbase-social-menu {
+	line-height: 0; // collapse space added by inline <ul>
+
+	ul {
+		&:extend(.unstyled-list);
+		.clearfix();
+		display: inline-block;
+	}
+
+	li {
+		float: left;
+		padding-right: 2em;
+		padding-bottom: 1em;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		outline: 0;
+
+		&:hover,
+		&:focus {
+			background: @accent;
+			color: #fff;
+			border-color: @accent;
+		}
+	}
+}

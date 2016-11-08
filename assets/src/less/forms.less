@@ -1,0 +1,76 @@
+//
+// Post styles for common form elements
+//
+fieldset {
+	margin: 3em 0;
+	padding: 0;
+	border: none;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+input[type="password"],
+select,
+textarea {
+	display: block;
+	padding: 0.5em 1em;
+	border: @border;
+
+	&:hover {
+		//
+	}
+
+	&:focus {
+		outline: 0;
+		//
+	}
+}
+
+input[type="search"] {
+	box-sizing: border-box; // normalize.css resets this to content-box
+}
+
+select {
+	max-width: 100%;
+	cursor: pointer;
+}
+
+textarea {
+	width: 100%;
+	min-height: 10em;
+}
+
+label {
+	display: inline-block;
+	margin-top: 3em;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+	&:extend(.totcbase-button all);
+	border-radius: 0; // Safari 8
+}
+
+input[disabled],
+button[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+button[readonly],
+select[readonly],
+textarea[readonly] {
+	cursor: not-allowed;
+}
