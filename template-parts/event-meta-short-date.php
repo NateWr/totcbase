@@ -9,6 +9,6 @@
 ?>
 <div class="entry-meta">
 	<span class="entry-date">
-		<?php echo luigi_eo_format_brief_date(); ?>
+		<?php echo totcbase_eo_format_brief_date(); ?>
 	</span>
 </div>
