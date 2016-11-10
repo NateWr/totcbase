@@ -89,17 +89,33 @@
 // Narrow content column for single posts and pages
 .totcbase-narrow-content .content-area {
 
-	.entry-title,
-	.entry-meta,
-	.entry-content > *,
-	.entry-footer,
-	.comments-area,
-	.page-title,
-	.archive-description {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: @content-width;
+	@media(min-width: @screen-sm) {
+
+		.entry-title,
+		.entry-meta,
+		.entry-content > *,
+		.entry-footer,
+		.comments-area,
+		.page-title,
+		.archive-description {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: @content-width;
+		}
+
+		.entry-content > figure,
+		.entry-content > img {
+			max-width: 100%;
+
+			&.alignleft {
+				margin-right: 2em;
+			}
+
+			&.alignright {
+				margin-left: 2em;
+			}
+		}
 	}
 }
 
