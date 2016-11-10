@@ -62,12 +62,14 @@
 .fdm-menu .fdm-item-title {
     margin-top: 0;
     margin-bottom: 1em;
+    font-weight: @bold;
 }
 
 .fdm-item-price-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    top: -2.5em;
+    right: -6em;
+    margin-bottom: -2.5em;
     text-align: right;
 
     > span {
@@ -167,9 +169,16 @@
     .fdm-src-panel {
         clear: both;
     }
+
+    .fdm-item-price-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-bottom: 0;
+    }
 }
 
-@media(min-width: @screen-sm) {
+@media(min-width: @screen-md) {
 
     // Two-column display
     .fdm-columns-2 {
