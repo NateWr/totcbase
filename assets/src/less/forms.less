@@ -25,6 +25,7 @@ textarea {
 	display: block;
 	padding: 0.5em 1em;
 	border: @border;
+	max-width: 100%;
 
 	&:hover {
 		//
@@ -33,6 +34,26 @@ textarea {
 	&:focus {
 		outline: 0;
 		//
+	}
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+input[type="password"],
+select {
+
+	@media(min-width: @screen-sm) {
+		max-width: 15em;
 	}
 }
 
@@ -52,8 +73,7 @@ textarea {
 
 label {
 	display: inline-block;
-	margin-top: 3em;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 	cursor: pointer;
 }
 
