@@ -22,7 +22,7 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
-				get_template_part( 'content', 'search' );
+				get_template_part( 'template-parts/content', 'search' );
 			endwhile;
 
 			totcbase_the_posts_navigation();
