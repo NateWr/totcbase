@@ -29,14 +29,8 @@
 		padding-left: 4em;
 	}
 
-	// Add dropdown caret
-	[aria-haspopup] > a:after {
-		&:extend(.totcbase-caret-down);
-		margin-left: 0.5em;
-	}
-
 	// No longer collapsed in header
-	@media(min-width: @screen-md) {
+	@media(min-width: @screen-sm) {
 
 		a {
 			padding-left: 2em;
@@ -56,6 +50,12 @@
 				background: @bg;
 				z-index: 100;
 			}
+		}
+
+		// Add dropdown caret
+		[aria-haspopup] > a:after {
+			&:extend(.totcbase-caret-down);
+			margin-left: 0.5em;
 		}
 
 		// Open sub-menus

@@ -17,6 +17,11 @@
 		return;
 	}
 
+	body = document.getElementsByTagName( 'body' )[0];
+	if ( 'undefined' === typeof body ) {
+		return;
+	}
+
 	menu = container.getElementsByTagName( 'ul' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.
@@ -33,10 +38,12 @@
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
+			body.className = body.className.replace( ' menu-toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className += ' toggled';
+			body.className += ' menu-toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}

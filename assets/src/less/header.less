@@ -1,0 +1,139 @@
+//
+// Styles for the header
+//
+.site-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-height: 60px;
+	background: @bg;
+	overflow-y: hidden;
+	z-index: 999;
+
+	.site-branding {
+		padding: 5px;
+	}
+
+	.brand {
+		margin: 0;
+	}
+
+	.home-link {
+		display: block;
+		padding-right: 90px;
+		overflow-x: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-size: 1.4rem;
+		line-height: 30px;
+		font-weight: @bold;
+		color: @text;
+		text-decoration: none;
+		overflow-x: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.site-tagline {
+		display: block;
+		padding-right: 90px;
+		color: @text-light;
+		font-size: 0.85em;
+		line-height: 20px;
+		overflow-x: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.menu-toggle {
+		&:extend(.totcbase-button-accent all);
+		position: absolute;
+		top: 10px;
+		right: 5px;
+		padding: 9px 1em;
+		font-size: 0.85em;
+		line-height: 20px;
+	}
+
+	@media(min-width: @screen-xs) {
+		max-height: 80px;
+
+		.site-branding {
+			padding: 15px;
+		}
+
+		.home-link,
+		.site-tagline {
+			padding-right: 110px;
+		}
+
+		.menu-toggle {
+			top: 20px;
+			right: 20px;
+		}
+	}
+
+	@media(min-width: @screen-sm) {
+		position: relative;
+		max-height: none;
+		overflow-y: visible;
+
+		.site-branding,
+		.main-navigation,
+		.totcbase-social-menu {
+			display: inline-block;
+			padding: 2em;
+			vertical-align: middle;
+		}
+
+		.site-branding {
+			padding: 2em;
+		}
+
+		.main-navigation,
+		.totcbase-social-menu {
+			padding: 1em;
+		}
+
+		.home-link,
+		.site-tagline {
+			padding: 0;
+		}
+
+		.home-link {
+			font-size: 2.5rem;
+			line-height: 1.5em;
+		}
+
+		.site-tagline {
+			font-size: 1rem;
+			line-height: 1.5em;
+		}
+
+		.menu-toggle {
+			display: none;
+		}
+	}
+}
+
+// Swap out scrolling menu is toggled open
+.menu-toggled {
+	overflow-y: hidden;
+
+	.site-header {
+		max-height: 100%;
+		padding-bottom: 60px;
+		overflow-y: scroll;
+	}
+}
+
+// Scroll away with the admin bar
+.admin-bar .site-header {
+	position: absolute;
+	top: 46px;
+
+	@media(min-width: @screen-sm) {
+		position: relative;
+		top: 0;
+	}
+}
