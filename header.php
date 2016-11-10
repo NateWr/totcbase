@@ -37,7 +37,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<?php if ( has_nav_menu( 'primary_menu' ) ) : ?>
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php get_template_part( 'template-parts/menu-primary' ); ?>
 			</nav><!-- #site-navigation -->

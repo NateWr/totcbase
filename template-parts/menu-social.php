@@ -7,7 +7,7 @@
  *
  * @package Theme_of_the_Crop_Base_Theme
  */
-if ( has_nav_menu( 'social_menu' ) ) {
+if ( has_nav_menu( 'social' ) ) {
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'social',
