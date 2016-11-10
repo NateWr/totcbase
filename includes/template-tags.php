@@ -207,6 +207,7 @@ function totcbase_posted_by() {
  * @since 0.1
  */
 function totcbase_entry_footer() {
+
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
@@ -220,13 +221,6 @@ function totcbase_entry_footer() {
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'totcbase' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
-	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'totcbase' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</span>';
 	}
 
 	edit_post_link(

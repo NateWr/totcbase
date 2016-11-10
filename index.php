@@ -17,7 +17,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
+		<?php if ( is_home() ) : ?>
+			<header>
+				<h1 class="page-title">
+					<?php single_post_title(); ?>
+				</h1>
+			</header>
+		<?php endif;
+
 		if ( have_posts() ) :
 
 			while ( have_posts() ) : the_post();

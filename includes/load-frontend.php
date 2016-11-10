@@ -97,7 +97,7 @@ function totcbase_add_body_classes( $classes ) {
 	}
 
 	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
+	if ( !is_singular() ) {
 		$classes[] = 'hfeed';
 	}
 
@@ -112,6 +112,7 @@ function totcbase_add_body_classes( $classes ) {
 		$classes[] = 'totcbase-primary-sidebar-inactive';
 	}
 
+	// Narrow content pages
 	if ( is_home() ||
 			is_page_template( 'page-narrow.php' ) ||
 			is_page_template( 'page-narrow-no-sidebar.php' ) ||
@@ -119,11 +120,6 @@ function totcbase_add_body_classes( $classes ) {
 			( get_post_type() == 'post' && is_archive() )
 		) {
 		$classes[] = 'totcbase-narrow-content';
-	}
-
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
 	}
 
 	return $classes;

@@ -1,0 +1,45 @@
+//
+// Styles for post lists in archive and taxonomy pages
+//
+body.hfeed .site-main {
+
+	article {
+		margin-top: 6em;
+		margin-bottom: 6em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.entry-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1.5rem;
+
+		a {
+			color: @text;
+			text-decoration: none;
+		}
+	}
+
+	.entry-meta {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		font-size: 0.85rem;
+	}
+
+	.wp-post-image,
+	.entry-content {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.byline {
+		display: none;
+	}
+}

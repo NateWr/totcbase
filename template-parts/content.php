@@ -51,7 +51,9 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php totcbase_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<?php if (is_singular() ) : ?>
+		<footer class="entry-footer">
+			<?php totcbase_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </article><!-- #post-## -->
