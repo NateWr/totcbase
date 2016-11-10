@@ -51,7 +51,6 @@ module.exports = function(grunt) {
 			build: {
 				files: {
 					'assets/js/frontend.js': [
-						'lib/WAI-ARIA-Walker_Nav_Menu/wai-aria.js',
 						'assets/src/js/frontend.js',
 						'assets/src/js/frontend-*.js'
 					],

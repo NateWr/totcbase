@@ -85,7 +85,6 @@ function totcbase_load_context() {
  */
 function totcbase_load_frontend() {
 	include_once( 'includes/load-frontend.php' );
-	include_once( 'lib/WAI-ARIA-Walker_Nav_Menu/aria-walker-nav-menu.php' );
 	include_once( 'includes/template-tags.php' );
 	include_once( 'includes/integrations/business-profile.php' );
 	include_once( 'includes/integrations/food-and-drink-menu.php' );
