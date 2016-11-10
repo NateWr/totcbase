@@ -91,6 +91,16 @@ add_action( 'wp_footer', 'totcbase_dequeue_footer_assets' );
  */
 function totcbase_add_body_classes( $classes ) {
 
+	// Adds a class of group-blog to blogs with more than 1 published author.
+	if ( is_multi_author() ) {
+		$classes[] = 'group-blog';
+	}
+
+	// Adds a class of hfeed to non-singular pages.
+	if ( ! is_singular() ) {
+		$classes[] = 'hfeed';
+	}
+
 	// Add class if sidebar is not shown
 	if ( ( is_front_page() && !is_home() ) ||
 			is_page_template( 'page-full-width.php' ) ||
@@ -102,7 +112,8 @@ function totcbase_add_body_classes( $classes ) {
 		$classes[] = 'totcbase-primary-sidebar-inactive';
 	}
 
-	if ( is_page_template( 'page-narrow.php' ) ||
+	if ( is_home() ||
+			is_page_template( 'page-narrow.php' ) ||
 			is_page_template( 'page-narrow-no-sidebar.php' ) ||
 			( get_post_type() == 'post' && is_single() ) ||
 			( get_post_type() == 'post' && is_archive() )
@@ -149,27 +160,6 @@ function totcbase_set_map_options( $opts ) {
 }
 add_filter( 'bpfwp_google_map_options', 'totcbase_set_map_options' );
 add_filter( 'eventorganiser_venue_map_options', 'totcbase_set_map_options' );
-
-/**
- * Adds custom classes to the array of body classes.
- *
- * @param array $classes Classes for the body element.
- * @return array
- */
-function totcbase_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'totcbase_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
