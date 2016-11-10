@@ -94,12 +94,20 @@ function totcbase_add_body_classes( $classes ) {
 	// Add class if sidebar is not shown
 	if ( ( is_front_page() && !is_home() ) ||
 			is_page_template( 'page-full-width.php' ) ||
-			!is_active_sidebar( 'primary-sidebar' ) ||
+			!is_active_sidebar( 'primary' ) ||
 			( get_post_type() == 'fdm-menu' && totcbase_menu_has_two_cols() ) ||
 			( get_post_type() == 'event' && is_single() ) ||
 			( get_post_type() == 'location' && is_single() )
 		) {
 		$classes[] = 'totcbase-primary-sidebar-inactive';
+	}
+
+	if ( is_page_template( 'page-narrow.php' ) ||
+			is_page_template( 'page-narrow-no-sidebar.php' ) ||
+			( get_post_type() == 'post' && is_single() ) ||
+			( get_post_type() == 'post' && is_archive() )
+		) {
+		$classes[] = 'totcbase-narrow-content';
 	}
 
 	// Adds a class of hfeed to non-singular pages.

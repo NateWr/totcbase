@@ -2,6 +2,115 @@
 // Site-wide scaffold and layout styles
 //
 
+// Outer containers
+.site-header,
+.site-content,
+.site-footer {
+	padding-left: 1em;
+	padding-right: 1em;
+
+	@media(min-width: @screen-sm) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: @content-width;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@media(min-width: @screen-md) {
+		.clearfix();
+		max-width: @container-full-md;
+	}
+
+	@media(min-width: @screen-lg) {
+		max-width: @container-full-lg;
+	}
+
+	@media(min-width: @screen-xl) {
+		max-width: @container-full-xl;
+	}
+}
+
+// Content / sidebar columns
+.site-content {
+
+	@media(min-width: @screen-md) {
+
+		.content-area {
+			float: left;
+			width: @container-primary-md;
+		}
+
+		.widget-area {
+			float: right;
+			width: @sidebar-width;
+		}
+	}
+
+	@media(min-width: @screen-lg) {
+
+		.content-area {
+			width: @container-primary-lg;
+		}
+
+		.widget-area {
+			margin-right: @gutter;
+		}
+	}
+
+	@media(min-width: @screen-xl) {
+
+		.content-area {
+			width: @container-primary-xl;
+		}
+
+		.widget-area {
+			margin-left: @gutter * 4;
+			margin-right: @gutter * 4;
+		}
+	}
+}
+
+// Layouts without a sidebar
+.totcbase-primary-sidebar-inactive {
+
+	@media(min-width: @screen-md) {
+
+		.content-area {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			width: auto;
+			max-width: 100%;
+		}
+	}
+}
+
+// Narrow content column for single posts and pages
+.totcbase-narrow-content .content-area {
+
+	.entry-title,
+	.entry-meta,
+	.entry-content > *,
+	.entry-footer,
+	.comments-area,
+	.page-title,
+	.archive-description {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: @content-width;
+	}
+}
+
+// A narrow content page template that hides the sidebar
+.totcbase-narrow-content.page-template-page-narrow-no-sidebar-php .content-area {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: @content-width;
+}
+
 .site-content {
 	margin-top: 100px;
 }
