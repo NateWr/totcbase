@@ -3,20 +3,20 @@
  * A dummy control to display placeholder text in the customizer
  *
  * @see WP_Customize_Control
- * @since 0.0.1
+ * @since 0.1
  */
 class TotcBase_WP_Customize_Notice_Control extends WP_Customize_Control {
 	/**
 	 * Control type
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $type = 'notice';
 
 	/**
 	 * HTML content to display
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $content = '';
 

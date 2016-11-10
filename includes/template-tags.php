@@ -29,7 +29,7 @@ function totcbase_print_logo( $logo_setting = 'site_logo', $scale_setting = 'sit
 /**
  * Print the footer logo
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_print_footer_logo() {
 	totcbase_print_logo( 'footer_logo', 'footer_logo_scale' );
@@ -38,7 +38,7 @@ function totcbase_print_footer_logo() {
 /**
  * Retrieve the URL for an attachment image
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_get_attachment_img_src_url( $attachment_id, $size ) {
 	$img = wp_get_attachment_image_src( $attachment_id, $size );
@@ -98,16 +98,6 @@ function totcbase_rtb_setting_exists( $setting ) {
 
 	$setting = $rtb_controller->settings->get_setting( $setting );
 	return !empty( $setting );
-}
-
-/**
- * Retrive the URL for an attachment image
- *
- * @since 0.1.0
- */
-function totcbase_get_attachment_img_src_url( $attachment_id, $size ) {
-	$img = wp_get_attachment_image_src( $attachment_id, $size );
-	return $img[0];
 }
 
 /**

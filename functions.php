@@ -37,8 +37,6 @@ function totcbase_setup() {
 	);
 
 	include_once( 'lib/updater/theme-updater.php' );
-	include_once( get_template_directory() . '/includes/template-tags.php' );
-	include_once( get_template_directory() . '/includes/extras.php' );
 }
 add_action( 'after_setup_theme', 'totcbase_setup' );
 
@@ -71,7 +69,7 @@ add_action( 'after_setup_theme', 'totcbase_load_typecase', -1 );
 /**
  * Load files when required for a given context
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_load_context() {
 	add_action( 'get_header', 'totcbase_load_frontend' );
@@ -83,7 +81,7 @@ function totcbase_load_context() {
 /**
  * Load files required to render the frontend
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_load_frontend() {
 	include_once( 'includes/load-frontend.php' );
@@ -98,18 +96,17 @@ function totcbase_load_frontend() {
 /**
  * Load files required by the customizer
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_load_customizer() {
 	include_once( 'includes/load-customizer.php' );
 	include_once( 'includes/template-tags.php' );
-	include_once( 'includes/template-shortcodes.php' );
 }
 
 /**
  * Load files handling widgets
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_load_widgets() {
 	include_once( 'includes/widgets/totcbase-recent-posts.php' );
@@ -127,7 +124,7 @@ function totcbase_load_widgets() {
 /**
  * Load files required globally that need to run during the `init` hook
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_load_init() {
 	include_once( 'includes/load-theme-setup.php' );
@@ -139,7 +136,7 @@ function totcbase_load_init() {
  * Load files required to work with the theme-painter lib and return
  * $args for get_theme_support().
  *
- * @since 0.0.1
+ * @since 0.1
  */
 function totcbase_load_theme_painter() {
 	include_once( 'lib/theme-painter/theme-painter.php' );

@@ -9,41 +9,41 @@
  *
  * @see WP_Customize_Media_Control
  * @see WP_Customize_Control
- * @since 0.0.1
+ * @since 0.1
  */
 class TotcBase_WP_Customize_Scaled_Image_Control extends WP_Customize_Media_Control {
 	/**
 	 * Control type
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $type = 'scaled_image';
 
 	/**
 	 * Setting id for the scale
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $scale = '';
 
 	/**
 	 * Default value for the scale
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $scale_default = '';
 
 	/**
 	 * Minimum allowed scale value
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $min = 0;
 
 	/**
 	 * Maximum allowed scale value
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public $max = 100;
 
@@ -54,7 +54,7 @@ class TotcBase_WP_Customize_Scaled_Image_Control extends WP_Customize_Media_Cont
 	 * @param WP_Customize_Manager $manager Customizer bootstrap instance.
 	 * @param string               $id      Control ID.
 	 * @param array                $args    Optional. Arguments to override class property defaults.
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public function __construct( $manager, $id, $args = array() ) {
 
@@ -81,7 +81,7 @@ class TotcBase_WP_Customize_Scaled_Image_Control extends WP_Customize_Media_Cont
 	 *
 	 * This adds a range input below the media control.
 	 *
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public function content_template() {
 		parent::content_template();
@@ -102,7 +102,7 @@ class TotcBase_WP_Customize_Scaled_Image_Control extends WP_Customize_Media_Cont
 	 *
 	 *
 	 * @see WP_Customize_Media_Control::to_json()
-	 * @since 0.0.1
+	 * @since 0.1
 	 */
 	public function to_json() {
 		parent::to_json();
