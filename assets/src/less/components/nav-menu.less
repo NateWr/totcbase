@@ -1,0 +1,72 @@
+//
+// Common navigation menu styles
+//
+
+.nav-menu {
+	&:extend(.unstyled-list all);
+
+	ul {
+		&:extend(.unstyled-list all);
+	}
+
+	li,
+	a {
+		outline: 0;
+	}
+
+	a {
+		display: block;
+		padding: 0.5em 1em;
+		text-decoration: none;
+	}
+
+	// Nesting
+	.sub-menu a {
+		padding-left: 2em;
+	}
+
+	.sub-menu .sub-menu a {
+		padding-left: 4em;
+	}
+
+	// Add dropdown caret
+	[aria-haspopup] > a:after {
+		&:extend(.totcbase-caret-down);
+		margin-left: 0.5em;
+	}
+
+	// No longer collapsed in header
+	@media(min-width: @screen-md) {
+
+		a {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+
+		> li {
+			display: inline-block;
+			position: relative;
+			text-align: left;
+
+			ul {
+				position: absolute;
+				top: 100%;
+				left: -9999px;
+				width: 15em;
+				background: @bg;
+				z-index: 100;
+			}
+		}
+
+		// Open sub-menus
+		[aria-expanded="true"] > ul {
+			left: 0;
+		}
+
+		[aria-expanded="true"] ul ul {
+			position: relative;
+			top: auto;
+			left: auto;
+		}
+	}
+}
