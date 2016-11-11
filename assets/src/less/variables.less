@@ -4,6 +4,7 @@
 
 // Colors
 @bg:                  #fff;
+@bg-disabled:         #ccc;
 
 @accent:              #69d;
 @accent-lift:         #8bd;
@@ -11,6 +12,7 @@
 @text:                rgba(0,0,0,0.85);
 @text-light:          fadeout( @text, 35% );
 @text-on-accent:      #fff;
+@text-on-disabled:    @text-light;
 
 @border-color:        rgba(0,0,0,0.3);
 @border-light-color:  rgba(0,0,0,0.12);
@@ -20,8 +22,8 @@
 @warn:                #F57405;
 
 // Lines and edges
-@border:         1px solid @border-color;
-@border-light:   1px solid @border-light-color;
+@border:              1px solid @border-color;
+@border-light:        1px solid @border-light-color;
 @radius:              3px;
 
 // Typography
@@ -55,7 +57,7 @@
 
 // Event Calendar
 @fc-row-height: 10em;
-@fc-border-color: @border-color;
+@fc-border-color: #bbb;
 @fc-calendar-header-bg: transparent; //  Background behind day of the week/month headers
 @fc-agenda-header-bg: @fc-calendar-header-bg;
 @fc-basic-header-bg: @fc-calendar-header-bg;

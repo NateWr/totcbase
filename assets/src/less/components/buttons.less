@@ -24,14 +24,15 @@
 	}
 
 	&:disabled {
-		border-color: @bg;
+		border-color: @bg-disabled;
 		color: @text-light;
 
 		&:hover,
 		&:focus,
 		&:active {
-			background: @bg;
-			color: @text-light;
+			border-color: @bg-disabled;
+			background: @bg-disabled;
+			color: @text-on-disabled;
 		}
 	}
 }
