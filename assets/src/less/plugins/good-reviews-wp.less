@@ -4,16 +4,15 @@
 .gr-reviews {
 
 	.gr-review {
-		margin: 6em auto;
+		margin-top: 6em;
+		margin-bottom: 6em;
 		padding: 0;
-		max-width: 40em;
 		border: none;
 	}
 
-	.gr-review-body,
-	.gr-author {
-		margin: 2em 0;
-		color: @text;
+	.gr-review-body {
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 
 	.gr-review {
@@ -28,7 +27,8 @@
 	}
 
 	.gr-review-rating {
-		margin-bottom: 2em;
+		font-size: 1.5em;
+		margin-bottom: 0.5em;
 	}
 
 	.gr-rating-stars {
@@ -37,9 +37,9 @@
 		.dashicons {
 			display: block;
 			float: left;
-			width: 2em;
-			height: 2em;
-			line-height: 2em;
+			width: 1.5em;
+			height: 1.5em;
+			line-height: 1.5em;
 			text-align: left;
 			color: @accent;
 		}
@@ -49,26 +49,36 @@
 		color: @accent;
 	}
 
-	.gr-review-body {
-		font-style: italic;
-	}
-
 	.gr-review-date {
-		//
+		margin-right: 1em;
+		font-size: 0.85em;
+		color: @text-light;
 	}
 
 	.gr-review-url {
-		//
+		font-size: 0.85em;
 	}
 
 	.gr-author {
 		position: relative;
 		display: block;
+		margin-top: 2em;
+		margin-left: 0;
 		font-style: normal;
+		color: @text;
 	}
 
 	.gr-author-affiliation {
+		font-size: 0.85em;
+	}
+
+	.gr-author-url {
 		//
+	}
+
+	// No url
+	.gr-author-org {
+		color: @text-light;
 	}
 
 	.gr-author-img {
