@@ -6,7 +6,9 @@
 	word-wrap: break-word;
 
 	> li {
-		padding: 4em;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		list-style: none;
 
 		&:first-child {
 			padding-top: 0;
@@ -15,7 +17,7 @@
 
 	.widgettitle {
 		margin-top: 0;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 }
 
@@ -30,7 +32,7 @@
 .eo-agenda-widget {
 
 	> ul {
-		padding-left: 0;
+		padding-left: 1em;
 	}
 
 	li {
@@ -54,20 +56,29 @@
 	&:extend(.limit-large-list-nesting all);
 }
 
-.widget_calendar table {
-	width: 100%;
+.widget_calendar .calendar_wrap {
+
+	table {
+		width: 100%;
+		border: none;
+	}
 
 	caption {
-		//
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		font-weight: 700;
+		border-bottom: @border;
 	}
 
 	td,
 	th {
+		padding: 0.5em;
 		text-align: center;
 	}
 
 	a {
-		//
+		font-weight: @bold;
+		text-decoration: none;
 	}
 
 	#prev,
@@ -161,23 +172,34 @@
 	}
 
 	li {
-		padding-bottom: 4em;
-	}
-
-	.entry-header {
-		margin-bottom: 1em;
+		padding-bottom: 2em;
 	}
 
 	.entry-title {
-		//
+		font-weight: @bold;
+
+		a {
+			color: @text;
+			text-decoration: none;
+		}
 	}
 
 	.entry-content {
-		//
+		font-size: 0.85em;
 
-		p {
+		p:first-child {
 			margin: 0;
 		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.more {
+		display: inline-block;
+		margin-top: 0.5em;
+		font-size: 0.85em;
 	}
 }
 
