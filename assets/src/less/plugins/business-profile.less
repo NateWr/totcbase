@@ -2,23 +2,35 @@
 // Styles for handling the output of the Business Profile plugin
 //
 .bp-contact-card {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 40em;
 	font-style: normal; // overwrite default <address> styling
 }
 
+.bp-name {
+	font-weight: @bold;
+}
+
+.bp-phone,
+.bp-booking,
+.bp-contact {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 .bp-opening-hours {
+	margin-top: 2em;
+	max-width: 25em;
 	text-align: center;
 	clear: both;
 
 	.bp-title {
+		font-weight: @bold;
 		margin-bottom: 2em;
 	}
 
 	.bp-weekday {
 		.clearfix();
-		padding: 0.5em 1em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
 		text-align: left;
 	}
 
