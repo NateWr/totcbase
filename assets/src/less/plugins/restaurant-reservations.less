@@ -8,6 +8,20 @@
 		margin: 0;
 	}
 
+	fieldset > div {
+		margin-top: 1em;
+		margin-bottom: 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	legend {
+		font-size: 1.2em;
+		font-weight: @bold;
+	}
+
 	.rtb-select.location label:before {
 		// icon
 	}
@@ -36,11 +50,6 @@
 		// icon
 	}
 
-	.rtb-text input,
-	.rtb-select select {
-		width: 100%;
-	}
-
 	.rtb-checkbox input,
 	.rtb-radio input,
 	.rtb-confirm input,
@@ -61,6 +70,10 @@
 	.rtb-text.date input,
 	.rtb-text.time input {
 		cursor: pointer;
+	}
+
+	.add-message {
+		display: none;
 	}
 
 	.rtb-error {
