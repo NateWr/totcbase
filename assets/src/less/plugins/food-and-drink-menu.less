@@ -38,6 +38,12 @@
 
 .fdm-item-panel {
     position: relative;
+}
+
+.fdm-item-title,
+.fdm-item-price-wrapper,
+.fdm-item-content,
+.fdm-menu-item-flags {
     padding-right: 6em; // price
 }
 
@@ -48,28 +54,28 @@
     margin-bottom: -3em;
     line-height: 3em;
     text-transform: uppercase;
-    // color: @no;
+    color: @no;
 }
 
 .fdm-item-offer {
-    // color: #0082E4;
+    color: #0082E4;
 }
 
 .fdm-item-featured {
-    // color: #6CB500;
+    color: #6CB500;
 }
 
 .fdm-menu .fdm-item-title {
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0;
     font-weight: @bold;
 }
 
 .fdm-item-price-wrapper {
     position: relative;
-    top: -2.5em;
+    float: right;
+    top: -1.5em;
     right: -6em;
-    margin-bottom: -2.5em;
     text-align: right;
 
     > span {
