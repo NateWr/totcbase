@@ -29,7 +29,7 @@ function totcbase_get_theme_painter_args() {
 						'attributes' => array(
 							'background',
 						),
-						'default' => '#eee',
+						'default' => '#fff',
 					),
 					'accent' =>array(
 						'label' => __( 'Accent Color', 'totcbase' ),
@@ -40,7 +40,7 @@ function totcbase_get_theme_painter_args() {
 						'attributes' => array(
 							'color',
 						),
-						'default' => '#55f',
+						'default' => '#69d',
 					),
 					'accent-lift' =>array(
 						'label' => __( 'Accent Hover Color', 'totcbase' ),
@@ -51,7 +51,7 @@ function totcbase_get_theme_painter_args() {
 						'attributes' => array(
 							'color',
 						),
-						'default' => '#99f',
+						'default' => '#8bd',
 					),
 					'text' => array(
 						'label' => __( 'Text Color', 'totcbase' ),
@@ -86,7 +86,7 @@ function totcbase_get_theme_painter_args() {
  */
 function totcbase_tp( $color ) {
 
-	$background_is_dark = theme_painter_is_color_dark( get_theme_mod( 'theme_painter_setting_background', '#eee'  ) );
+	$background_is_dark = theme_painter_is_color_dark( get_theme_mod( 'theme_painter_setting_background', '#fff'  ) );
 
 	set_theme_mod( 'is_dark_background', $background_is_dark );
 
@@ -128,8 +128,8 @@ function totcbase_tp( $color ) {
  */
 function totcbase_theme_painter_add_body_class( $classes ) {
 
-	$background_color = get_theme_mod( 'theme_painter_setting_background', '#eee'  );
-	if ( $background_color != '#eee' ) {
+	$background_color = get_theme_mod( 'theme_painter_setting_background', '#fff'  );
+	if ( $background_color != '#fff' ) {
 		$classes[] = get_theme_mod( 'is_dark_background', false ) ? 'totcbase-bg-dark' : 'totcbase-bg-light';
 	}
 
