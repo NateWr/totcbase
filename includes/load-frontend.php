@@ -118,7 +118,7 @@ function totcbase_add_body_classes( $classes ) {
 			is_page_template( 'page-narrow-no-sidebar.php' ) ||
 			( get_post_type() == 'post' && is_single() ) ||
 			( get_post_type() == 'post' && is_archive() ) ||
-			( get_post_type() == 'event' && is_archive() )
+			( get_post_type() == 'event' )
 		) {
 		$classes[] = 'totcbase-narrow-content';
 	}

@@ -18,6 +18,8 @@
 			<?php get_template_part( 'template-parts/event', 'meta' ); ?>
 		</div>
 
+		<?php echo totcbase_eo_maybe_print_venue_map( 0, array( 'scrollwheel' => false, 'class' => 'event-single-venue-map' ) ); ?>
+
 		<div class="entry-content">
 			<div class="entry-content" itemprop="description">
 				<?php the_content(); ?>

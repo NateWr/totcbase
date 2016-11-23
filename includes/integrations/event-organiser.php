@@ -121,7 +121,7 @@ function totcbase_eo_maybe_print_venue_map( $venue = 0, $map_args = array() ) {
  * @since 0.1
  */
 function totcbase_eo_get_venue() {
-	return function_exists( 'eo_get_venue' ) && eo_get_venue();
+	return function_exists( 'eo_get_venue' ) ? eo_get_venue() : '';
 }
 
 /**
