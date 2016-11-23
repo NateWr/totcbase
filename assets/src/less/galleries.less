@@ -1,0 +1,53 @@
+//
+// Gallery styles
+//
+.gallery {
+	.clearfix();
+
+	figcaption,
+	.wp-caption,       // Required to pass theme-check
+	.wp-caption-text,  // Required to pass theme-check
+	.gallery-caption { // Required to pass theme-check
+		&:extend(.screen-reader-text all);
+	}
+}
+
+.gallery-item {
+	text-align: center;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.gallery-icon {
+	padding: 0.5em;
+}
+
+.gallery:not(.gallery-columns-1) .gallery-item {
+	float: left;
+}
+
+.gallery-columns-2 .gallery-item  { width: 50%;    }
+.gallery-columns-3 .gallery-item  { width: 33.33%; }
+.gallery-columns-4 .gallery-item  { width: 25%;    }
+.gallery-columns-5 .gallery-item  { width: 20%;    }
+.gallery-columns-6 .gallery-item  { width: 16.66%; }
+.gallery-columns-7 .gallery-item  { width: 14.28%; }
+.gallery-columns-8 .gallery-item  { width: 12.5%;  }
+.gallery-columns-9 .gallery-item  { width: 11.11%; }
+.gallery-columns-10 .gallery-item { width: 10%;    }
+
+// Ensure floats clear with new rows
+.gallery-columns-2 .gallery-item:nth-child(odd),
+.gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery-columns-9 .gallery-item:nth-child(9n+1),
+.gallery-columns-10 .gallery-item:nth-child(10n+1) {
+	clear: left;
+}
