@@ -56,7 +56,8 @@
 	&:extend(.limit-large-list-nesting all);
 }
 
-.widget_calendar .calendar_wrap {
+.widget_calendar .calendar_wrap,
+.widget_calendar .eo-widget-cal-wrap {
 
 	table {
 		width: 100%;
@@ -207,25 +208,35 @@
 .eo-agenda-widget {
 
 	.dates {
-		margin-top: -3em;
+		margin-top: -2em;
+		padding-left: 0;
 
 		> li {
+			margin: 0;
 			padding-left: 0;
-			margin-top: 0.5em;
-
-			&:before {
-				display: none;
-			}
+			line-height: 2em;
+			list-style: none;
 		}
 	}
 
 	.a-date {
-		padding-top: 1em;
 		padding-left: 0;
+		font-size: 0.85em;
+		line-height: 1.5em;
 
 		> li {
 			margin-top: 1em;
 			margin-bottom: 1em;
+			padding-left: 0;
+			list-style: none;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		.meta {
@@ -238,16 +249,16 @@
 .eo-agenda-widget-nav {
 	position: relative;
 	display: block;
-	height: 3em;
+	height: 2em;
 	text-align: right;
 	z-index: 2;
 
 	> span {
 		position: relative;
 		display: inline-block;
-		width: 3em;
-		height: 3em;
-		color: transparent;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
 		text-align: center;
 		overflow: hidden;
 		cursor: pointer;
