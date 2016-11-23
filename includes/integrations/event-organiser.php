@@ -29,15 +29,17 @@ add_filter( 'get_the_archive_title', 'totcbase_eo_set_archive_title' );
  * This wrapper prints out a single date or a date range if the event
  * recurs. Expects to be called during the loop.
  *
+ * @param bool $show_occurrence_date Whether or not to show the date range or
+ *  a single occurrence for recurring events. Default: show a date range
  * @since 0.1
  */
-function totcbase_eo_format_brief_date() {
+function totcbase_eo_format_brief_date( $show_occurrence_date = false ) {
 
 	if ( !function_exists( 'eo_format_event_occurrence' ) || !function_exists( 'eo_recurs' ) || !function_exists( 'eo_get_schedule_start' ) || !function_exists( 'eo_get_schedule_last' ) ) {
 		return '';
 	}
 
-	if ( eo_recurs() ) {
+	if ( eo_recurs() && !$show_occurrence_date ) {
 		return sprintf( esc_html_x( '%s&mdash;%s', 'Brief format of start and end dates of recurring events.', 'totcbase' ), eo_get_schedule_start( get_option( 'date_format' ) ), eo_get_schedule_last( get_option( 'date_format' ) ) );
 	}
 
