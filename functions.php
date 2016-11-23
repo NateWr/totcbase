@@ -28,6 +28,7 @@ function totcbase_setup() {
 		'disable_append_to_content' => true,
 		'disable_styles' => true,
 	) );
+	add_theme_support( 'totc-layout-control' );
 
 	register_nav_menus(
 		array(
