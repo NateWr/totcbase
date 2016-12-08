@@ -28,7 +28,21 @@ function totcbase_setup() {
 		'disable_append_to_content' => true,
 		'disable_styles' => true,
 	) );
-	add_theme_support( 'totc-layout-control' );
+	add_theme_support( 'totc-layout-control', array(
+		'components' => array(
+			'content-block',
+			'posts-reviews',
+			'posts-menus',
+			'posts-pages',
+			'opening-hours',
+			'map',
+			'booking-form',
+			'recent-posts',
+			'upcoming-events',
+			'locations',
+			'gallery',
+		),
+	) );
 
 	register_nav_menus(
 		array(
