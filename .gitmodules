@@ -1,0 +1,9 @@
+[submodule "lib/eo-full-calendar-base-style"]
+	path = lib/eo-full-calendar-base-style
+	url = git@github.com:NateWr/eo-full-calendar-base-style.git
+[submodule "lib/theme-painter"]
+	path = lib/theme-painter
+	url = git@github.com:NateWr/theme-painter.git
+[submodule "lib/totc-theme-setup"]
+	path = lib/totc-theme-setup
+	url = git@github.com:NateWr/totc-theme-setup.git
