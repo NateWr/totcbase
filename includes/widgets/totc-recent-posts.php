@@ -7,7 +7,7 @@
  *
  * @package Theme_of_the_Crop_Base_Theme
  */
-class TotcBase_Widget_Recent_Posts extends WP_Widget_Recent_Posts {
+class Totc_Widget_Recent_Posts extends WP_Widget_Recent_Posts {
 
 	/**
 	 * Outputs the content for the current Recent Posts widget instance.

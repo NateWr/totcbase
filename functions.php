@@ -124,10 +124,10 @@ function totcbase_load_customizer() {
  * @since 0.1
  */
 function totcbase_load_widgets() {
-	include_once( 'includes/widgets/totcbase-recent-posts.php' );
+	include_once( 'includes/widgets/totc-recent-posts.php' );
 
 	unregister_widget( 'WP_Widget_Recent_Posts' );
-	register_widget( 'TotcBase_Widget_Recent_Posts' );
+	register_widget( 'Totc_Widget_Recent_Posts' );
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Primary Sidebar', 'totcbase' ),
