@@ -1,0 +1,159 @@
+//
+// Styles for the Theme of the Crop Layout Control plugin
+//
+.clc-component-layout {
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.clc-component-content-block {
+
+	.clc-wrapper {
+		.clearfix();
+	}
+
+	.image {
+		float: left;
+		width: 50%;
+		text-align: center;
+	}
+
+	.text {
+		float: right;
+		width: 50%;
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.image-position-right {
+
+		.image {
+			float: right;
+		}
+
+		.text {
+			float: left;
+		}
+	}
+}
+
+.clc-component-posts-reviews {
+
+	.gr-reviews + .gr-reviews {
+		margin-top: 4em;
+
+	}
+}
+
+.clc-component-opening-hours {
+
+	.bp-opening-hours {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.clc-component-locations {
+
+	.clc-wrapper {
+		.clearfix();
+	}
+
+	.clc-locations-1 {
+
+		article {
+			.clearfix();
+		}
+
+		.bp-map {
+			float: left;
+			width: 50%;
+			padding-right: 1em;
+		}
+
+		.bp-contact-card {
+			float: right;
+			width: 50%;
+			padding-left: 1em;
+		}
+	}
+
+	@media(min-width: @screen-md) {
+
+		.clc-locations-2 {
+
+			article {
+				float: left;
+				width: 50%;
+				padding-left: 1em;
+				padding-right: 1em;
+
+				&:nth-child(2n+1) {
+					padding-right: 1em;
+				}
+
+				&:nth-child(2n+2) {
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+	@media(min-width: @screen-lg) {
+
+		.clc-wrapper:not(.clc-locations-1) {
+
+			article {
+				float: left;
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
+
+		.clc-locations-3,
+		.clc-locations-5,
+		.clc-locations-6,
+		.clc-locations-7,
+		.clc-locations-8,
+		.clc-locations-9,
+		.clc-locations-10 {
+
+			article {
+				width: 33%;
+			}
+		}
+
+		.clc-locations-3 {
+
+			article {
+
+				&:last-child {
+					float: right;
+				}
+			}
+		}
+
+		.clc-locations-4 {
+
+			article {
+				width: 25%;
+			}
+		}
+
+		.clc-locations-5 article:nth-child(3n+1),
+		.clc-locations-6 article:nth-child(3n+1),
+		.clc-locations-7 article:nth-child(3n+1),
+		.clc-locations-8 article:nth-child(3n+1),
+		.clc-locations-9 article:nth-child(3n+1),
+		.clc-locations-10 article:nth-child(3n+1) {
+			clear: left;
+		}
+	}
+
+}
