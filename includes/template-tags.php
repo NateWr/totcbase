@@ -203,3 +203,15 @@ function totcbase_entry_footer() {
 		'</span>'
 	);
 }
+
+/**
+ * Print `the_content` without the `wpautop` filter. Designed to be used
+ * to print the content from the `content-layout-control` lib.
+ *
+ * @since 0.1
+ */
+function totcbase_totclc_the_content() {
+	remove_filter( 'the_content', 'wpautop' );
+	the_content();
+	add_filter( 'the_content', 'wpautop' );
+}
