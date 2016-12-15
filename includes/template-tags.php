@@ -111,7 +111,7 @@ add_action( 'save_post',     'totcbase_category_transient_flusher' );
  */
 function totcbase_menu_has_two_cols( $id = 0 ) {
 	$id = $id ? $id : get_the_ID();
-	$has_two_cols = get_post_meta( get_the_ID(), 'fdm_menu_column_two', true );
+	$has_two_cols = get_post_meta( $id, 'fdm_menu_column_two', true );
 
 	return !empty( $has_two_cols );
 }

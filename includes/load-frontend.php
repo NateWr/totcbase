@@ -128,6 +128,21 @@ function totcbase_add_body_classes( $classes ) {
 add_action( 'body_class', 'totcbase_add_body_classes' );
 
 /**
+ * Add conditional classes to the post wrapper
+ *
+ * @since 0.1
+ */
+function totcbase_add_post_classes( $classes ) {
+
+	if ( get_post_type() === 'fdm-menu' ) {
+		$classes[] = totcbase_menu_has_two_cols() ? 'fdm-menu-post-has-two-cols' : 'fdm-menu-post-has-one-col';
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'totcbase_add_post_classes' );
+
+/**
  * Define a custom style for Google Maps
  *
  * Used to alter maps from Business Profile and Event Organiser.
