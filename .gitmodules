@@ -7,3 +7,6 @@
 [submodule "lib/totc-theme-setup"]
 	path = lib/totc-theme-setup
 	url = git@github.com:NateWr/totc-theme-setup.git
+[submodule "lib/WAI-ARIA-Walker_Nav_Menu"]
+	path = lib/WAI-ARIA-Walker_Nav_Menu
+	url = git@github.com:proteusthemes/WAI-ARIA-Walker_Nav_Menu.git
