@@ -105,6 +105,12 @@ function totcbase_tp( $color ) {
 			$selectors[] = 'a';
 			break;
 
+		case 'accent-lift' :
+
+			$selectors[] = 'a:hover';
+			$selectors[] = 'a:focus';
+			break;
+
 		case 'text' :
 
 			$selectors[] = 'body';
