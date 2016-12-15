@@ -13,49 +13,9 @@
  */
 function totcbase_customize_register( $wp_customize ) {
 
-	include_once( 'customizer/WP_Customize_Scaled_Image_Control.php' );
-	$wp_customize->register_control_type( 'TotcBase_WP_Customize_Scaled_Image_Control' );
-
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_section( 'title_tagline' )->title = esc_html__( 'Logo, Site Title and Tagline', 'totcbase' );
-
-	// Logo
-	$wp_customize->add_setting(
-		'site_logo',
-		array(
-			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'site_logo_scale',
-		array(
-			'default'           => 100,
-			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new TotcBase_WP_Customize_Scaled_Image_Control(
-			$wp_customize,
-			'site_logo',
-			array(
-				'label'     => __( 'Logo', 'totcbase' ),
-				'section'   => 'title_tagline',
-				'settings'  => array(
-					'site_logo' => 'site_logo',
-					'site_logo_scale' => 'site_logo_scale',
-				),
-				'priority'  => 1,
-				'mime_type' => 'image',
-				'min'       => 50,
-				'max'       => 200,
-			)
-		)
-	);
 
 	// Footer
 	$wp_customize->add_section(
@@ -63,42 +23,6 @@ function totcbase_customize_register( $wp_customize ) {
 		array(
 			'capability' => 'edit_theme_options',
 			'title'      => __( 'Footer', 'totcbase' ),
-		)
-	);
-
-	$wp_customize->add_setting(
-		'footer_logo',
-		array(
-			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'footer_logo_scale',
-		array(
-			'default'           => 75,
-			'sanitize_callback' => 'absint',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new TotcBase_WP_Customize_Scaled_Image_Control(
-			$wp_customize,
-			'footer_logo',
-			array(
-				'label'     => __( 'Logo', 'totcbase' ),
-				'section'   => 'footer',
-				'settings'  => array(
-					'footer_logo' => 'footer_logo',
-					'footer_logo_scale' => 'footer_logo_scale',
-				),
-				'priority'  => 1,
-				'mime_type' => 'image',
-				'min'       => 40,
-				'max'       => 150,
-			)
 		)
 	);
 
@@ -155,3 +79,18 @@ function totcbase_customize_register( $wp_customize ) {
 	}
 }
 add_action( 'customize_register', 'totcbase_customize_register' );
+
+/**
+ * Load assets to handle the customizer control panel
+ *
+ * @since 0.1.0
+ */
+function totcbase_customizer_enqueue_control_assets() {
+
+	// Maybe load minified scripts
+	$min = SCRIPT_DEBUG ? '' : 'min.';
+
+	wp_enqueue_style( 'totcbase-customizer-control', get_template_directory_uri() . '/assets/css/customizer-control.' . $min . 'css', '0.1.0' );
+	wp_enqueue_script( 'totcbase-customizer-control', get_template_directory_uri() . '/assets/js/customizer-control.' . $min . 'js', array( 'customize-controls' ), '0.1.0', true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'totcbase_customizer_enqueue_control_assets' );

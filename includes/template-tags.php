@@ -6,36 +6,6 @@
  */
 
 /**
- * Print the logo
- *
- * @since 0.1.0
- */
-function totcbase_print_logo( $logo_setting = 'site_logo', $scale_setting = 'site_logo_scale' ) {
-
-	$logo_url = wp_get_attachment_url( get_theme_mod( $logo_setting ) );
-	if ( !$logo_url ) {
-		return;
-	}
-
-	$scale = get_theme_mod( $scale_setting, 100 );
-	$scale = $scale == 100 ? '' : ' style="max-width: ' . absint( $scale ) . 'px"';
-	?>
-
-	<img src="<?php echo esc_url( $logo_url ); ?>" class="logo-image" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"<?php echo $scale; ?>>
-
-	<?php
-}
-
-/**
- * Print the footer logo
- *
- * @since 0.1
- */
-function totcbase_print_footer_logo() {
-	totcbase_print_logo( 'footer_logo', 'footer_logo_scale' );
-}
-
-/**
  * Retrieve the URL for an attachment image
  *
  * @since 0.1

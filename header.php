@@ -29,7 +29,13 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<div class="site-branding">
-			<?php get_template_part( 'template-parts/logo' ); ?>
+			<<?php echo is_front_page() ? 'h1' : 'div'; ?> class="brand">
+				<?php if ( has_custom_logo() ) : ?>
+					<?php the_custom_logo(); ?>
+				<?php else : ?>
+					<?php echo get_bloginfo( 'name', 'display' ); ?>
+				<?php endif; ?>
+			</<?php echo is_front_page() ? 'h1' : 'div'; ?>>
 			<?php if ( get_bloginfo( 'description' ) ) : ?>
 				<span class="site-tagline">
 					<?php echo get_bloginfo( 'description', 'display' ); ?>
