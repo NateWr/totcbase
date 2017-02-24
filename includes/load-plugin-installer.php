@@ -82,6 +82,8 @@ function totcbase_register_required_plugins() {
 		),
 	);
 
+	$plugins = apply_filters( 'totcbase_plugin_installer', $plugins );
+
 	/*
 	 * Array of configuration settings. Amend each line as needed.
 	 *
