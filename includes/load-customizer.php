@@ -90,7 +90,7 @@ function totcbase_customizer_enqueue_control_assets() {
 	// Maybe load minified scripts
 	$min = SCRIPT_DEBUG ? '' : 'min.';
 
-	wp_enqueue_style( 'totcbase-customizer-control', get_template_directory_uri() . '/assets/css/customizer-control.' . $min . 'css', '0.1.0' );
-	wp_enqueue_script( 'totcbase-customizer-control', get_template_directory_uri() . '/assets/js/customizer-control.' . $min . 'js', array( 'customize-controls' ), '0.1.0', true );
+	wp_enqueue_style( 'totcbase-customizer-control', get_theme_file_uri( '/assets/css/customizer-control.' . $min . 'css' ), '0.1.0' );
+	wp_enqueue_script( 'totcbase-customizer-control', get_theme_file_uri( '/assets/js/customizer-control.' . $min . 'js' ), array( 'customize-controls' ), '0.1.0', true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'totcbase_customizer_enqueue_control_assets' );

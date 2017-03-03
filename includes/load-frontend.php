@@ -44,10 +44,10 @@ function totcbase_enqueue_assets() {
 	}
 
 	// Enqueue frontend script
-	wp_enqueue_script( 'totcbase-js', get_template_directory_uri() . '/assets/js/frontend.' . $min . 'js', array( 'jquery' ), '0.1', true );
+	wp_enqueue_script( 'totcbase-js', get_theme_file_uri( '/assets/js/frontend.' . $min . 'js' ), array( 'jquery' ), '0.1', true );
 
 	// Load Picturefill to fix bugs with responsive images in Safari 8
-	wp_enqueue_script( 'picturefill', get_template_directory_uri() . '/lib/picturefill/picturefill.' . $min . 'js', array(), '3.0.2', true );
+	wp_enqueue_script( 'picturefill', get_theme_file_uri( '/lib/picturefill/picturefill.' . $min . 'js' ), array(), '3.0.2', true );
 
 	// Add comment reply script
 	if ( is_singular() && function_exists( 'comments_open' ) && comments_open() ) {
