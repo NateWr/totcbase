@@ -45,8 +45,7 @@ function totcbase_customize_register( $wp_customize ) {
 	);
 
 	// Add a notice about theme fonts if the Typecase plugin isn't active
-	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-	if ( !is_plugin_active( 'typecase/typecase.php' ) ) {
+	if ( !defined( 'TYPECASE_PATH' ) ) {
 		include_once( 'customizer/WP_Customize_Notice_Control.php' );
 
 		$wp_customize->add_section(
