@@ -33,6 +33,14 @@ function totcbase_register_required_plugins() {
 	$plugins = array(
 
 		array(
+			'name'      => __( 'Theme of the Crop - Layout Control', 'totcbase' ),
+			'slug'      => 'totc-layout-control',
+			'required'  => false,
+			'source'    => 'https://github.com/NateWr/totc-layout-control/releases/download/0.9.1/totc-layout-control-0.9.1.zip',
+			'version'   => '0.9.1',
+		),
+
+		array(
 			'name'      => __( 'Food and Drink Menu', 'totcbase' ),
 			'slug'      => 'food-and-drink-menu',
 			'required'  => false,
