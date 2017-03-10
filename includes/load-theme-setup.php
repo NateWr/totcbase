@@ -33,7 +33,7 @@ function totcbase_theme_setup_strings( $strings ) {
 	$strings['page.documentation.help.description'] = __( 'Read the help guide for this theme', 'totcbase' );
 	$strings['page.documentation.support'] = __( 'Support', 'totcbase' );
 	$strings['page.documentation.support.url'] = 'https://themeofthecrop.com/contact/';
-	$strings['page.documentation.support.description'] = sprintf( __( 'Get %sone-on-one support%s if you are having trouble or need customizations done.', 'totcbase' ), '<a href="https://themeofthecrop.com/contact/">', '</a>' );
+	$strings['page.documentation.support.description'] = sprintf( __( 'Get %1$sone-on-one support%2$s if you are having trouble or need customizations done.', 'totcbase' ), '<a href="https://themeofthecrop.com/contact/">', '</a>' );
 	$strings['page.documentation.demo'] = __( 'Theme Demo', 'totcbase' );
 	$strings['page.documentation.demo.url'] = 'http://demo.themeofthecrop.com/totcbase';
 	$strings['page.documentation.demo.description'] = __( 'View an online demo of this theme', 'totcbase' );

@@ -40,7 +40,7 @@ function totcbase_eo_format_brief_date( $show_occurrence_date = false ) {
 	}
 
 	if ( eo_recurs() && !$show_occurrence_date ) {
-		return sprintf( esc_html_x( '%s&mdash;%s', 'Brief format of start and end dates of recurring events.', 'totcbase' ), eo_get_schedule_start( get_option( 'date_format' ) ), eo_get_schedule_last( get_option( 'date_format' ) ) );
+		return sprintf( esc_html_x( '%1$s&mdash;%2$s', 'Brief format of start and end dates of recurring events.', 'totcbase' ), eo_get_schedule_start( get_option( 'date_format' ) ), eo_get_schedule_last( get_option( 'date_format' ) ) );
 	}
 
 	return eo_format_event_occurrence();
