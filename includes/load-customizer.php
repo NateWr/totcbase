@@ -54,6 +54,7 @@ function totcbase_customize_register( $wp_customize ) {
 			array(
 				'title'      => esc_html__( 'Theme Fonts', 'totcbase' ),
 				'priority'   => 30,
+				'capability' => 'install_plugins',
 			)
 		);
 
