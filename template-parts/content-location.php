@@ -27,7 +27,7 @@
 					) );
 				?>
 			</div><!-- .entry-content -->
-			<meta itemprop="url" content="<?php echo esc_url( get_permalink() ); ?>">
+			<meta itemprop="url" content="<?php the_permalink(); ?>">
 		</div>
 	</article>
 

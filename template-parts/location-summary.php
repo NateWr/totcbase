@@ -20,7 +20,7 @@
 	?>
 
 	<div class="location-more-link">
-		<a href="<?php echo esc_url( get_permalink() ); ?>">
+		<a href="<?php the_permalink(); ?>">
 			<?php
 				// Translators: 1 and 3 are an opening and closing <span> tag. 2 is the post title.
 				printf( esc_html__( 'Read More%1$s about the %2$s location%3$s', 'totcbase' ), '<span class="screen-reader-text">', get_the_title(), '</span>' );
