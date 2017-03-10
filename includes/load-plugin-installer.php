@@ -33,7 +33,7 @@ function totcbase_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'      => __( 'Theme of the Crop - Layout Control', 'totcbase' ),
+			'name'      => esc_html__( 'Theme of the Crop - Layout Control', 'totcbase' ),
 			'slug'      => 'totc-layout-control',
 			'required'  => false,
 			'source'    => 'https://github.com/NateWr/totc-layout-control/releases/download/0.9.1/totc-layout-control-0.9.1.zip',
@@ -41,49 +41,49 @@ function totcbase_register_required_plugins() {
 		),
 
 		array(
-			'name'      => __( 'Food and Drink Menu', 'totcbase' ),
+			'name'      => esc_html__( 'Food and Drink Menu', 'totcbase' ),
 			'slug'      => 'food-and-drink-menu',
 			'required'  => false,
 		),
 
 		array(
-			'name'      => __( 'Restaurant Reservations', 'totcbase' ),
+			'name'      => esc_html__( 'Restaurant Reservations', 'totcbase' ),
 			'slug'      => 'restaurant-reservations',
 			'required'  => false,
 		),
 
 		array(
-			'name'      => __( 'Business Profile', 'totcbase' ),
+			'name'      => esc_html__( 'Business Profile', 'totcbase' ),
 			'slug'      => 'business-profile',
 			'required'  => false,
 		),
 
 		array(
-			'name'      => __( 'Good Reviews', 'totcbase' ),
+			'name'      => esc_html__( 'Good Reviews', 'totcbase' ),
 			'slug'      => 'good-reviews-wp',
 			'required'  => false,
 		),
 
 		array(
-			'name'      => __( 'Event Organiser', 'totcbase' ),
+			'name'      => esc_html__( 'Event Organiser', 'totcbase' ),
 			'slug'      => 'event-organiser',
 			'required'  => false,
 		),
 
 		array(
-			'name'      => __( 'Ninja Forms', 'totcbase' ),
+			'name'      => esc_html__( 'Ninja Forms', 'totcbase' ),
 			'slug'      => 'ninja-forms',
 			'required'  => false,
 		),
 
 		array(
-			'name'      => __( 'WP Featherlight', 'totcbase' ),
+			'name'      => esc_html__( 'WP Featherlight', 'totcbase' ),
 			'slug'      => 'wp-featherlight',
 			'required'  => false,
 		),
 
 		array(
-			'name'        => __( 'WordPress SEO by Yoast', 'totcbase' ),
+			'name'        => esc_html__( 'WordPress SEO by Yoast', 'totcbase' ),
 			'slug'        => 'wordpress-seo',
 			'required'    => false,
 			'is_callable' => 'wpseo_init',

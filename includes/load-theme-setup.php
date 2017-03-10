@@ -16,31 +16,31 @@ add_action( 'wp_ajax_nopriv_totc-theme-setup', 'totc_theme_setup_handle_nopriv_a
 function totcbase_theme_setup_strings( $strings ) {
 
 	$strings['lib.url_base'] = get_template_directory_uri() . '/lib/totc-theme-setup';
-	$strings['page.title'] = __( 'Theme Setup', 'totcbase' );
-	$strings['page.menu.title'] = __( 'Theme Setup', 'totcbase' );
-	$strings['page.no.access'] = __( 'You do not have sufficient permissions to access this page.', 'totcbase' );
-	$strings['page.demo.section'] = __( 'Demo Content', 'totcbase' );
-	$strings['page.demo.install_plugin'] = __( 'Install', 'totcbase' );
-	$strings['page.demo.install_plugin.no_permission'] = __( 'You must install this plugin before you can add demo content, but you do not have permission to install plugins. Please contact your web administrator for assistance.', 'totcbase' );
-	$strings['page.demo.activate_plugin'] = __( 'Activate Plugin', 'totcbase' );
-	$strings['page.demo.activate_plugin.no_permission'] = __( 'You must activate this plugin before you can add demo content, but you do not have permission to activate plugins. Please contact your web administrator for assistance.', 'totcbase' );
-	$strings['page.demo.install_demo'] = __( 'Install Demo Content', 'totcbase' );
-	$strings['page.demo.install_demo.no_permission'] = __( 'You do not have permission to install demo content. Please contact your web administrator for assistance.', 'totcbase' );
-	$strings['page.demo.view_demo'] = __( 'View Demo', 'totcbase' );
-	$strings['page.documentation.section'] = __( 'Documentation & Support', 'totcbase' );
-	$strings['page.documentation.help'] = __( 'Help Documentation', 'totcbase' );
+	$strings['page.title'] = esc_html__( 'Theme Setup', 'totcbase' );
+	$strings['page.menu.title'] = esc_html__( 'Theme Setup', 'totcbase' );
+	$strings['page.no.access'] = esc_html__( 'You do not have sufficient permissions to access this page.', 'totcbase' );
+	$strings['page.demo.section'] = esc_html__( 'Demo Content', 'totcbase' );
+	$strings['page.demo.install_plugin'] = esc_html__( 'Install', 'totcbase' );
+	$strings['page.demo.install_plugin.no_permission'] = esc_html__( 'You must install this plugin before you can add demo content, but you do not have permission to install plugins. Please contact your web administrator for assistance.', 'totcbase' );
+	$strings['page.demo.activate_plugin'] = esc_html__( 'Activate Plugin', 'totcbase' );
+	$strings['page.demo.activate_plugin.no_permission'] = esc_html__( 'You must activate this plugin before you can add demo content, but you do not have permission to activate plugins. Please contact your web administrator for assistance.', 'totcbase' );
+	$strings['page.demo.install_demo'] = esc_html__( 'Install Demo Content', 'totcbase' );
+	$strings['page.demo.install_demo.no_permission'] = esc_html__( 'You do not have permission to install demo content. Please contact your web administrator for assistance.', 'totcbase' );
+	$strings['page.demo.view_demo'] = esc_html__( 'View Demo', 'totcbase' );
+	$strings['page.documentation.section'] = esc_html__( 'Documentation & Support', 'totcbase' );
+	$strings['page.documentation.help'] = esc_html__( 'Help Documentation', 'totcbase' );
 	$strings['page.documentation.help.url'] = 'http://doc.themeofthecrop.com/themes/totcbase?utm_source=Theme&utm_medium=Theme%20Help&utm_campaign=TotcBase';
-	$strings['page.documentation.help.description'] = __( 'Read the help guide for this theme', 'totcbase' );
-	$strings['page.documentation.support'] = __( 'Support', 'totcbase' );
+	$strings['page.documentation.help.description'] = esc_html__( 'Read the help guide for this theme', 'totcbase' );
+	$strings['page.documentation.support'] = esc_html__( 'Support', 'totcbase' );
 	$strings['page.documentation.support.url'] = 'https://themeofthecrop.com/contact/';
-	$strings['page.documentation.support.description'] = sprintf( __( 'Get %1$sone-on-one support%2$s if you are having trouble or need customizations done.', 'totcbase' ), '<a href="https://themeofthecrop.com/contact/">', '</a>' );
-	$strings['page.documentation.demo'] = __( 'Theme Demo', 'totcbase' );
+	$strings['page.documentation.support.description'] = sprintf( esc_html__( 'Get %1$sone-on-one support%2$s if you are having trouble or need customizations done.', 'totcbase' ), '<a href="https://themeofthecrop.com/contact/">', '</a>' );
+	$strings['page.documentation.demo'] = esc_html__( 'Theme Demo', 'totcbase' );
 	$strings['page.documentation.demo.url'] = 'http://demo.themeofthecrop.com/totcbase';
-	$strings['page.documentation.demo.description'] = __( 'View an online demo of this theme', 'totcbase' );
-	$strings['ajax.installing'] = __( 'Installing', 'totcbase' );
-	$strings['ajax.error.nopriv'] = __( 'You have been logged out. Please login again before continuing.', 'totcbase' );
-	$strings['ajax.error.unknown'] = __( 'An unexpected error occur. Please reload the page and try again.', 'totcbase' );
-	$strings['ajax.error.route_unknown'] = __( 'Your request could not be processed. Please reload the page and try again', 'totcbase' );
+	$strings['page.documentation.demo.description'] = esc_html__( 'View an online demo of this theme', 'totcbase' );
+	$strings['ajax.installing'] = esc_html__( 'Installing', 'totcbase' );
+	$strings['ajax.error.nopriv'] = esc_html__( 'You have been logged out. Please login again before continuing.', 'totcbase' );
+	$strings['ajax.error.unknown'] = esc_html__( 'An unexpected error occur. Please reload the page and try again.', 'totcbase' );
+	$strings['ajax.error.route_unknown'] = esc_html__( 'Your request could not be processed. Please reload the page and try again', 'totcbase' );
 
 	return $strings;
 }
@@ -58,7 +58,7 @@ function totcbase_theme_setup_demos( $demos ) {
 	// Food and Drink Menu
 	$demos[] = new totcThemeSetupDemoFoodAndDrinkMenu(
 		array(
-			'title' => __( 'Food and Drink Menu', 'totcbase' ),
+			'title' => esc_html__( 'Food and Drink Menu', 'totcbase' ),
 			'strings' => array(
 				'menu.title' => _x( 'Demo Menu', 'This phrase is used in the Food and Drink Menu demo content installed from the Theme Setup page.', 'totcbase' ),
 				'section.starters' => _x( 'Starters', 'This phrase is used in the Food and Drink Menu demo content installed from the Theme Setup page.', 'totcbase' ),
@@ -73,7 +73,7 @@ function totcbase_theme_setup_demos( $demos ) {
 
 	$demos[] = new totcThemeSetupDemoRestaurantReservations(
 		array(
-			'title' => __( 'Restaurant Reservations', 'totcbase' ),
+			'title' => esc_html__( 'Restaurant Reservations', 'totcbase' ),
 			'strings' => array(
 				'post.content' => _x( 'This is a demo of the Restaurant Reservations booking form', 'This phrase is used in the Restaurant Reservations demo content installed from the Theme Setup page.', 'totcbase' ),
 				'post.title' => _x( 'Booking Form Demo', 'This phrase is used in the Restaurant Reservations demo content installed from the Theme Setup page.', 'totcbase' ),
@@ -83,7 +83,7 @@ function totcbase_theme_setup_demos( $demos ) {
 
 	$demos[] = new totcThemeSetupDemoBusinessProfile(
 		array(
-			'title' => __( 'Business Profile', 'totcbase' ),
+			'title' => esc_html__( 'Business Profile', 'totcbase' ),
 			'strings' => array(
 				'title' => _x( 'Contact Card Demo', 'This phrase is used in the Restaurant Reservations demo content installed from the Theme Setup page.', 'totcbase' ),
 				'address' => _x( "1600 Amphitheatre Parkway\nMountain View, CA 94043", 'This phrase is used in the Restaurant Reservations demo content installed from the Theme Setup page.', 'totcbase' ),
@@ -95,7 +95,7 @@ function totcbase_theme_setup_demos( $demos ) {
 
 	$demos[] = new totcThemeSetupDemoGoodReviewsForWordPress(
 		array(
-			'title' => __( 'Good Reviews for WordPress', 'totcbase' ),
+			'title' => esc_html__( 'Good Reviews for WordPress', 'totcbase' ),
 			'strings' => array(
 				'page.title' => _x( 'Good Reviews Demo', 'This phrase is used in the Good Reviews for WordPress demo content installed from the Theme Setup page.', 'totcbase' ),
 				'post.content' => _x( "This is a fabulous review! We were so excited by this website that we just had to go back for more. We've been three times now!", 'This phrase is used in the Good Reviews for WordPress demo content installed from the Theme Setup page.', 'totcbase' ),
@@ -109,7 +109,7 @@ function totcbase_theme_setup_demos( $demos ) {
 
 	$demos[] = new totcThemeSetupDemoEventOrganiser(
 		array(
-			'title' => __( 'Event Organiser', 'totcbase' ),
+			'title' => esc_html__( 'Event Organiser', 'totcbase' ),
 			'strings' => array(
 				'calendar.title' => _x( 'Event Calendar Demo', 'This phrase is used in the Restaurant Reservations demo content installed from the Theme Setup page.', 'totcbase' ),
 				'event.title' => _x( 'Demo Event %s', 'This phrase is used in the Restaurant Reservations demo content installed from the Theme Setup page.', 'totcbase' ),

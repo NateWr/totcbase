@@ -17,12 +17,12 @@ function totcbase_get_theme_painter_args() {
 		'sections' => array(
 
 			'general' => array(
-				'title' => __( 'Theme Colors', 'totcbase' ),
+				'title' => esc_html__( 'Theme Colors', 'totcbase' ),
 				'priority' => 20,
 				'colors' => array(
 					'background' => array(
-						'label' => __( 'Background Color', 'totcbase' ),
-						'description' => __( 'The primary background color on your site.', 'totcbase' ),
+						'label' => esc_html__( 'Background Color', 'totcbase' ),
+						'description' => esc_html__( 'The primary background color on your site.', 'totcbase' ),
 						'selectors' => array(
 							totcbase_tp( 'background' ),
 						),
@@ -32,8 +32,8 @@ function totcbase_get_theme_painter_args() {
 						'default' => '#fff',
 					),
 					'accent' =>array(
-						'label' => __( 'Accent Color', 'totcbase' ),
-						'description' => __( 'A dominant offset color used throughout the theme for links, buttons and other attention-grabbing items.', 'totcbase' ),
+						'label' => esc_html__( 'Accent Color', 'totcbase' ),
+						'description' => esc_html__( 'A dominant offset color used throughout the theme for links, buttons and other attention-grabbing items.', 'totcbase' ),
 						'selectors' => array(
 							totcbase_tp( 'accent' ),
 						),
@@ -43,8 +43,8 @@ function totcbase_get_theme_painter_args() {
 						'default' => '#69d',
 					),
 					'accent-lift' =>array(
-						'label' => __( 'Accent Hover Color', 'totcbase' ),
-						'description' => __( 'A lighter shade of the Accent Color used for hover effects.', 'totcbase' ),
+						'label' => esc_html__( 'Accent Hover Color', 'totcbase' ),
+						'description' => esc_html__( 'A lighter shade of the Accent Color used for hover effects.', 'totcbase' ),
 						'selectors' => array(
 							totcbase_tp( 'accent-lift' ),
 						),
@@ -54,8 +54,8 @@ function totcbase_get_theme_painter_args() {
 						'default' => '#8bd',
 					),
 					'text' => array(
-						'label' => __( 'Text Color', 'totcbase' ),
-						'description' => __( 'The main text color. This should stand out clearly from the Background Color so it is easy to read.', 'totcbase' ),
+						'label' => esc_html__( 'Text Color', 'totcbase' ),
+						'description' => esc_html__( 'The main text color. This should stand out clearly from the Background Color so it is easy to read.', 'totcbase' ),
 						'selectors' => array(
 							totcbase_tp( 'text' ),
 						),
@@ -65,8 +65,8 @@ function totcbase_get_theme_painter_args() {
 						'default' => '#222',
 					),
 					'text-light' => array(
-						'label' => __( 'Light Text Color', 'totcbase' ),
-						'description' => __( 'A shade used for text that should be less prominent. Often a lighter shade of the Text Color.', 'totcbase' ),
+						'label' => esc_html__( 'Light Text Color', 'totcbase' ),
+						'description' => esc_html__( 'A shade used for text that should be less prominent. Often a lighter shade of the Text Color.', 'totcbase' ),
 						'selectors' => totcbase_tp( 'text-light' ),
 						'attributes' => 'color',
 						'default' => '#777',

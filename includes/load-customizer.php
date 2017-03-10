@@ -22,7 +22,7 @@ function totcbase_customize_register( $wp_customize ) {
 		'footer',
 		array(
 			'capability' => 'edit_theme_options',
-			'title'      => __( 'Footer', 'totcbase' ),
+			'title'      => esc_html__( 'Footer', 'totcbase' ),
 		)
 	);
 
@@ -38,7 +38,7 @@ function totcbase_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'copyright',
 		array(
-			'label'          => __( 'Copyright', 'totcbase' ),
+			'label'          => esc_html__( 'Copyright', 'totcbase' ),
 			'section'        => 'footer',
 			'type'           => 'text',
 		)
@@ -52,7 +52,7 @@ function totcbase_customize_register( $wp_customize ) {
 		$wp_customize->add_section(
 			'totcbase_typecase_placeholder',
 			array(
-				'title'      => __( 'Theme Fonts', 'totcbase' ),
+				'title'      => esc_html__( 'Theme Fonts', 'totcbase' ),
 				'priority'   => 30,
 			)
 		);
@@ -62,7 +62,7 @@ function totcbase_customize_register( $wp_customize ) {
 				$wp_customize,
 				'totcbase_typecase_placeholder',
 				array(
-					'label'     => __( 'Install Typecase', 'totcbase' ),
+					'label'     => esc_html__( 'Install Typecase', 'totcbase' ),
 					'section'   => 'totcbase_typecase_placeholder',
 					'settings'   => array(),
 					'content'   => sprintf(
