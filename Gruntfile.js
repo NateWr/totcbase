@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 							'!.*', '!Gruntfile.js', '!package.json', '!node_modules', '!node_modules/**/*',
 							'!**/.*', '!**/Gruntfile.js', '!**/package.json', '!**/node_modules', '!**/node_modules/**/*',
 							'!assets/src', '!assets/src/**/*',
-							'!lib/eo-full-calendar-base-style/**/*',
+							'!lib/eo-full-calendar-base-style/**',
 						],
 						dest: 'totcbase/',
 					}
