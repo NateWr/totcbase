@@ -92,7 +92,7 @@ add_action( 'after_setup_theme', 'totcbase_load_typecase', -1 );
  * @since 0.1
  */
 function totcbase_load_context() {
-	add_action( 'get_header', 'totcbase_load_frontend' );
+	totcbase_load_frontend();  // load on after_setup_theme hook happening now
 	add_action( 'init', 'totcbase_load_customizer' );
 	add_action( 'widgets_init', 'totcbase_load_widgets' );
 	add_action( 'init', 'totcbase_load_init', 5 );
