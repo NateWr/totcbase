@@ -13,8 +13,6 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'style.css': 'assets/src/less/style.less',
-					'assets/css/customizer-preview.css': 'assets/src/less/customizer/customizer-preview.less',
-					'assets/css/customizer-control.css': 'assets/src/less/customizer/customizer-control.less'
 				}
 			},
 		},
@@ -26,14 +24,6 @@ module.exports = function(grunt) {
 						src: 'style.css',
 						dest: 'style.min.css',
 					},
-					{
-						src: 'assets/css/customizer-preview.css',
-						dest: 'assets/css/customizer-preview.min.css',
-					},
-					{
-						src: 'assets/css/customizer-control.css',
-						dest: 'assets/css/customizer-control.min.css',
-					}
 				]
 			}
 		},
