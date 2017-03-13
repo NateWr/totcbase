@@ -138,6 +138,12 @@ function totcbase_add_post_classes( $classes ) {
 		$classes[] = totcbase_menu_has_two_cols() ? 'fdm-menu-post-has-two-cols' : 'fdm-menu-post-has-one-col';
 	}
 
+	// If the title of this post should be hidden
+	$hidden_title_post_types = totcbase_get_hidden_title_post_types();
+	if ( is_singular() && in_array( get_post_type(), $hidden_title_post_types ) && get_post_meta( get_the_ID(), 'totcbase_remove_title', true ) ) {
+		$classes[] = 'totcbase-remove-title';
+	}
+
 	return $classes;
 }
 add_filter( 'post_class', 'totcbase_add_post_classes' );
@@ -182,3 +188,83 @@ function totcbase_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'totcbase_pingback_header' );
+
+/**
+ * Retrieve a list of post types for which titles can be hidden on the frontend
+ *
+ * @since 0.1
+ */
+function totcbase_get_hidden_title_post_types() {
+	return apply_filters(
+		'totcbase_hidden_title_post_types',
+		array(
+			'page',
+			'fdm-menu',
+		)
+	);
+}
+
+/**
+ * Add an option to hide the post title to the publish metabox
+ *
+ * @param WP_Post $post
+ * @since 0.1
+ */
+function totcbase_load_title_option( $post ) {
+
+	if ( empty( $post ) ) {
+		$post = get_post();
+	}
+
+	if ( !is_object( $post ) || !isset( $post->post_type ) ) {
+		return;
+	}
+
+	$allowed_post_types = totcbase_get_hidden_title_post_types();
+	if ( !in_array( $post->post_type, $allowed_post_types ) ) {
+		return;
+	}
+
+	$remove_title = get_post_meta( $post->ID, 'totcbase_remove_title', true );
+	$checked = empty( $remove_title ) ? false : true;
+	?>
+
+	<div class="misc-pub-section totcbase-remove-title">
+		<label for="totcbase_remove_title">
+			<input type="checkbox" name="totcbase_remove_title" id="totcbase_remove_title" value=""<?php checked( $checked ); ?>>
+			<?php esc_html_e( 'Hide menu title', 'totcbase' ); ?>
+		</label>
+	</div>
+
+	<?php
+	wp_nonce_field( 'save_totcbase_title_metabox', 'totcbase_title_metabox_nonce' );
+}
+add_action( 'post_submitbox_misc_actions', 'totcbase_load_title_option' );
+
+/**
+ * Save the option top hide the menu post title
+ *
+ * @param int $post_id
+ * @since 0.1
+ */
+function totcbase_save_title_option( $post_id ) {
+
+	if ( 'POST' !== $_SERVER['REQUEST_METHOD']
+			|| ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+			|| ( defined( 'DOING_AJAX' ) && DOING_AJAX )
+			|| ( defined( 'DOING_CRON' ) && DOING_CRON )
+			|| ( !current_user_can( 'edit_post', $post_id ) )
+			|| ( !isset( $_POST['totcbase_title_metabox_nonce'] ) )
+		) {
+		return false;
+	}
+
+	if ( !wp_verify_nonce( sanitize_key( $_POST['totcbase_title_metabox_nonce'] ), 'save_totcbase_title_metabox' ) ) {
+		return false;
+	}
+
+	$value = isset( $_POST['totcbase_remove_title'] ) ? true : false;
+
+	return (bool) update_post_meta( $post_id, 'totcbase_remove_title', $value );
+}
+add_action( 'save_post', 'totcbase_save_title_option' );
