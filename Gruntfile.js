@@ -85,6 +85,7 @@ module.exports = function(grunt) {
 		makepot: {
 			target: {
 				options: {
+					domainPath: 'languages',
 					processPot: function( pot, options ) {
 						pot.headers['report-msgid-bugs-to'] = 'https://themeofthecrop.com';
 						return pot;
