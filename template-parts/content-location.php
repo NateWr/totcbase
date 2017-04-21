@@ -15,6 +15,9 @@
 		</header>
 
 		<?php get_template_part( 'template-parts/location', 'meta' ); ?>
+		<?php if ( totcbase_bp_setting( 'image', get_the_ID() ) ) : ?>
+			<meta itemprop="image" content="<?php echo esc_url( wp_get_attachment_url( totcbase_bp_setting( 'image', get_the_ID() ) ) ); ?>">
+		<?php endif; ?>
 
 		<div class="location-content">
 			<div class="entry-content" itemprop="description">

@@ -31,3 +31,15 @@ function totcbase_bp_location_archive_title( $title ) {
 
 }
 add_filter( 'get_the_archive_title', 'totcbase_bp_location_archive_title' );
+
+/**
+ * Wrapper for bpfwp_setting() for safely retrieving settings
+ *
+ * @since 0.1
+ */
+function totcbase_bp_setting( $setting, $location = false ) {
+    if ( !function_exists( 'bpfwp_setting' ) ) {
+        return '';
+    }
+    return bpfwp_setting( $setting, $location );
+}
